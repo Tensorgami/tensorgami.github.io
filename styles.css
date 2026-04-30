@@ -129,11 +129,15 @@ h3 {
   font-size: 1.25rem;
 }
 
-.archive-section {
+.content-section {
   display: grid;
-  grid-template-columns: minmax(320px, 0.42fr) minmax(0, 1fr);
+  grid-template-columns: minmax(360px, 0.42fr) minmax(0, 1fr);
   gap: 44px;
   padding: 64px 0 76px;
+}
+
+.content-section + .content-section {
+  border-top: 1px solid var(--line);
 }
 
 .section-heading {
@@ -143,7 +147,7 @@ h3 {
 }
 
 .section-heading h2 {
-  font-size: clamp(2.4rem, 3vw, 3rem);
+  font-size: clamp(2.25rem, 2.7vw, 2.8rem);
   overflow-wrap: normal;
   white-space: nowrap;
 }
@@ -154,7 +158,7 @@ h3 {
   color: var(--muted);
 }
 
-.archive-list {
+.entry-list {
   display: grid;
   gap: 16px;
 }
@@ -231,7 +235,7 @@ h3 {
     padding: 52px 0 48px;
   }
 
-  .archive-section {
+  .content-section {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 44px 0 60px;
