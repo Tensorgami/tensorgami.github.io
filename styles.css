@@ -131,7 +131,7 @@ h3 {
 
 .archive-section {
   display: grid;
-  grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 0.42fr) minmax(0, 1fr);
   gap: 44px;
   padding: 64px 0 76px;
 }
@@ -143,8 +143,9 @@ h3 {
 }
 
 .section-heading h2 {
-  font-size: clamp(2.4rem, 3.4vw, 3.1rem);
+  font-size: clamp(2.4rem, 3vw, 3rem);
   overflow-wrap: normal;
+  white-space: nowrap;
 }
 
 .section-heading p:not(.eyebrow) {
