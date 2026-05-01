@@ -13,7 +13,7 @@ related mathematical profiles, including the associated ORCID record.
 The site is published with GitHub Pages at:
 
 ```text
-https://tensorgami.github.io
+https://tensorgami.com
 ```
 
 The repository is intentionally simple. The homepage is built from
