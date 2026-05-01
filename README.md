@@ -8,7 +8,7 @@ and automated CI checks, so readers can inspect both the argument and the
 formal verification when it is available.
 
 The About page gives a short statement of the archive's purpose and links to
-related mathematical profiles.
+related mathematical profiles, including the associated ORCID record.
 
 The site is published with GitHub Pages at:
 
