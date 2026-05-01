@@ -6,7 +6,7 @@
     <title>Tensorgami</title>
     <meta
       name="description"
-      content="A public archive for mathematical expositions, problem sets, and polished notes."
+      content="A public archive for mathematical expositions, problem sets, proof notes, and Lean-checked formalizations."
     >
     <link rel="stylesheet" href="styles.css?v=20260501-lean">
   </head>
@@ -24,8 +24,8 @@
         <p class="eyebrow">Public archive for mathematical notes</p>
         <h1 id="hero-title">Tensorgami</h1>
         <p class="hero-copy">
-          Mathematical expositions, problem sets, proofs, and polished notes
-          collected in one place.
+          Mathematical expositions, proof notes, problem sets, and
+          Lean-checked formalizations collected in one place.
         </p>
       </section>
 
@@ -36,7 +36,9 @@
           <p>
             A growing collection of PDF expositions in mathematics, ranging
             across analysis, number theory, combinatorics, abstract algebra,
-            algebraic geometry, and related fields.
+            algebraic geometry, and related fields. Proof-focused entries
+            include Lean source files and automated checks when formal
+            verification materially supports the note.
           </p>
         </div>
         <div class="entry-list">
@@ -57,7 +59,7 @@
               <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
             </div>
             <p class="verification-note">
-              Lean formalization included; checked by <code>lake build</code>
+              Lean formalization included; verified by <code>lake build</code>
               with mathlib v4.30.0-rc2.
             </p>
             <a
@@ -101,7 +103,7 @@
               <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
             </div>
             <p class="verification-note">
-              Lean formalization included; checked by <code>lake build</code>
+              Lean formalization included; verified by <code>lake build</code>
               with mathlib v4.30.0-rc2.
             </p>
             <a
