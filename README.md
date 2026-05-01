@@ -1,36 +1,16 @@
 # Tensorgami
 
-This repository is a GitHub Pages site for mathematical PDFs, proofs, and
-working notes in analysis and combinatorics.
+Tensorgami is a public archive for mathematical writing: expositions,
+problem sets, proofs, and polished notes.
 
-When this repository is named `tensorgami.github.io`, GitHub Pages can publish
-it at:
+The site is published with GitHub Pages at:
 
 ```text
 https://tensorgami.github.io
 ```
 
-## Suggested Layout
+The repository is intentionally simple. The homepage is built from
+`index.html` and `styles.css`, and the papers live under `pdfs/`, with
+sections for longer expositions and a problem corner.
 
-```text
-pdfs/
-  analysis/
-  combinatorics/
-ideas/
-tex/
-index.html
-styles.css
-```
-
-## Adding a PDF
-
-1. Upload the PDF into `pdfs/analysis/` or `pdfs/combinatorics/`.
-2. Edit `index.html`.
-3. Add a link to the PDF, for example:
-
-```html
-<a href="pdfs/analysis/my-note.pdf">My Note</a>
-```
-
-Keep filenames short, lowercase, and hyphenated, such as
-`banach-fixed-point.pdf` or `ramsey-sketches.pdf`.
+No build system is needed; GitHub Pages serves the files directly.
