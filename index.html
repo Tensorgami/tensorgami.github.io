@@ -8,7 +8,7 @@
       name="description"
       content="A public archive for mathematical expositions, problem sets, and polished notes."
     >
-    <link rel="stylesheet" href="styles.css?v=20260430-4">
+    <link rel="stylesheet" href="styles.css?v=20260501-lean">
   </head>
   <body>
     <header class="site-header">
@@ -64,7 +64,25 @@
               A proof that the half-open interval cannot be written as a
               countable disjoint union of closed subsets of the real line.
             </p>
-            <a href="pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf">Read PDF</a>
+            <div class="note-actions">
+              <a href="pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf">Read PDF</a>
+              <a href="formalizations/disjoint-decomposition/DisjointDecomposition.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Build check</a>
+            </div>
+            <p class="verification-note">
+              Lean formalization included; checked by <code>lake build</code>
+              with mathlib v4.30.0-rc2.
+            </p>
+            <a
+              class="verification-badge"
+              href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml"
+              aria-label="Lean build status"
+            >
+              <img
+                src="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml/badge.svg"
+                alt="Lean build status"
+              >
+            </a>
           </article>
         </div>
       </section>
