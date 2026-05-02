@@ -77,3 +77,23 @@ jobs:
       - name: Build Lean formalization
         working-directory: formalizations/separated-polynomial-differences
         run: lake build
+
+  galois-frobenius-composition-law:
+    name: Galois-Frobenius composition law note
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch mathlib cache
+        working-directory: formalizations/galois-frobenius-composition-law
+        run: lake exe cache get GaloisFrobeniusCompositionLaw.lean
+
+      - name: Build Lean formalization
+        working-directory: formalizations/galois-frobenius-composition-law
+        run: lake build
