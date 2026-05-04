@@ -6,28 +6,55 @@
     <title>Tensorgami</title>
     <meta
       name="description"
-      content="A public archive for mathematical expositions, problem sets, proof notes, and Lean-checked formalizations."
+      content="A public mathematical workbench for making proof mechanisms explicit, algorithmic, concrete, and inspectable."
     >
-    <link rel="stylesheet" href="styles.css?v=20260501-reset">
+    <link rel="stylesheet" href="styles.css?v=mechanisms">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="./" aria-label="Tensorgami home">Tensorgami</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#archive">Expositions</a>
-        <a href="#problem-corner">Problem Corner</a>
+        <a href="#problem-corner">Problem Sets</a>
+        <a href="mechanisms.html">Mechanisms</a>
         <a href="about.html">About</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">Public archive for mathematical notes</p>
+        <p class="eyebrow">Mathematical workbench</p>
         <h1 id="hero-title">Tensorgami</h1>
+        <p class="motto">Make the mechanism visible.</p>
         <p class="hero-copy">
-          Mathematical expositions, proof notes, problem sets, and
-          Lean-checked formalizations collected in one place.
+          Expositions, proof notes, problem sets, and formalized fragments
+          organized around the gears of proof: normal forms, reductions,
+          obstructions, finite certificates, and explicit structure.
         </p>
+      </section>
+
+      <section class="content-section mandate-section" aria-labelledby="mandate-title">
+        <div class="section-heading">
+          <p class="eyebrow">Mandate</p>
+          <h2 id="mandate-title">Explicit. Algorithmic. Concrete.</h2>
+        </div>
+        <div class="mandate-copy">
+          <p>
+            Tensorgami is a mathematical workbench for making abstract results
+            explicit, algorithmic, concrete, and inspectable.
+          </p>
+          <p>
+            The archive is broad by subject but narrow by method. Across
+            algebra, analysis, number theory, topology, combinatorics, and
+            formalization, the recurring aim is to take a theorem apart until
+            the working mechanism is visible: the coordinate system, the
+            reduction, the obstruction, the bookkeeping, the algorithm, or the
+            exact point where rigidity enters.
+          </p>
+          <p>
+            <a class="text-link" href="mechanisms.html">Open the Mechanism Map</a>
+          </p>
+        </div>
       </section>
 
       <section class="content-section" id="archive" aria-labelledby="archive-title">
@@ -35,14 +62,22 @@
           <p class="eyebrow">Archive</p>
           <h2 id="archive-title">Expositions</h2>
           <p>
-            A growing collection of PDF expositions in mathematics, ranging
-            across analysis, number theory, combinatorics, abstract algebra,
-            algebraic geometry, and related fields. Proof-focused entries
-            include Lean source files and automated checks when formal
-            verification materially supports the note.
+            PDF expositions and proof notes organized by subject, but shaped by
+            a common method: exposing the proof mechanism beneath the usual
+            packaging. Lean source and automated checks are included when
+            formal verification materially supports the note.
           </p>
         </div>
         <div class="entry-list">
+          <aside class="reading-note" aria-label="How to read this archive">
+            <strong>How to read this archive</strong>
+            <p>
+              The notes are not meant only as a subject-area syllabus. They are
+              a mechanism library. Many entries revisit standard results in
+              order to expose the proof engine beneath the usual packaging.
+            </p>
+          </aside>
+
           <article class="note-card">
             <p class="note-meta">
               <span>PDF</span>
@@ -56,6 +91,12 @@
               through a common one-variable outer polynomial; the final
               statement is verified in Lean.
             </p>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>normal forms</li>
+              <li>descent</li>
+              <li>coefficient comparison</li>
+              <li>diagonal collapse</li>
+            </ul>
             <div class="note-actions">
               <a href="pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf">Read PDF</a>
               <a href="formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean">Lean source</a>
@@ -76,6 +117,7 @@
               >
             </a>
           </article>
+
           <article class="note-card">
             <p class="note-meta">
               <span>PDF</span>
@@ -89,6 +131,12 @@
               reduction; includes a cubic square-root functional equation
               verified in Lean.
             </p>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>Galois descent</li>
+              <li>Frobenius</li>
+              <li>generic fibers</li>
+              <li>composition law</li>
+            </ul>
             <div class="note-actions">
               <a href="pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf">Read PDF</a>
               <a href="formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean">Lean source</a>
@@ -109,6 +157,7 @@
               >
             </a>
           </article>
+
           <article class="note-card">
             <p class="note-meta">
               <span>PDF</span>
@@ -121,8 +170,17 @@
               coherent extension, tensor operations, affine morphisms,
               relative Spec, and vector bundles.
             </p>
-            <a href="pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf">Read PDF</a>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>normalization</li>
+              <li>section rings</li>
+              <li>Veronese bookkeeping</li>
+              <li>geometric mechanism</li>
+            </ul>
+            <div class="note-actions">
+              <a href="pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf">Read PDF</a>
+            </div>
           </article>
+
           <article class="note-card">
             <p class="note-meta">
               <span>PDF</span>
@@ -134,6 +192,12 @@
               A number-theoretic extraction formula for the least prime above
               <code>m</code>, with the final statement verified in Lean.
             </p>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>arithmetic filtering</li>
+              <li>gcd extraction</li>
+              <li>valuation selection</li>
+              <li>finite certificate</li>
+            </ul>
             <div class="note-actions">
               <a href="pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf">Read PDF</a>
               <a href="formalizations/extracting-first-prime/ExtractingFirstPrime.lean">Lean source</a>
@@ -154,6 +218,7 @@
               >
             </a>
           </article>
+
           <article class="note-card">
             <p class="note-meta">
               <span>PDF</span>
@@ -165,6 +230,11 @@
               A proof that the half-open interval cannot be written as a
               countable disjoint union of closed subsets of the real line.
             </p>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>compactification</li>
+              <li>boundary obstruction</li>
+              <li>Baire mechanism</li>
+            </ul>
             <div class="note-actions">
               <a href="pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf">Read PDF</a>
               <a href="formalizations/disjoint-decomposition/DisjointDecomposition.lean">Lean source</a>
@@ -185,6 +255,7 @@
               >
             </a>
           </article>
+
           <article class="note-card">
             <p class="note-meta">
               <span>PDF</span>
@@ -196,18 +267,26 @@
               A rigorous topological proof of the sufficiency direction, using
               a compactness argument around the discontinuity set.
             </p>
-            <a href="pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf">Read PDF</a>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>compactness</li>
+              <li>quarantining bad sets</li>
+              <li>finite partition</li>
+            </ul>
+            <div class="note-actions">
+              <a href="pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf">Read PDF</a>
+            </div>
           </article>
         </div>
       </section>
 
       <section class="content-section" id="problem-corner" aria-labelledby="problem-title">
         <div class="section-heading">
-          <p class="eyebrow">Corner</p>
-          <h2 id="problem-title">Problem Corner</h2>
+          <p class="eyebrow">Problem Corner</p>
+          <h2 id="problem-title">Problem Sets</h2>
           <p>
-            A place for playful problem sets, contest-style puzzles, and short
-            mathematical challenges meant for exploration.
+            Exploratory problem sets and short exercises chosen for visible
+            structure, workable proof mechanisms, and concrete mathematical
+            play.
           </p>
         </div>
         <div class="entry-list">
@@ -222,7 +301,14 @@
               A compact collection of competition-flavored problems in
               combinatorics, number theory, recurrence, and series.
             </p>
-            <a href="pdfs/problem-corner/Exercise_Problems_in_Mathematics.pdf">Read PDF</a>
+            <ul class="tag-list" aria-label="Mechanism tags">
+              <li>problem workbench</li>
+              <li>discrete structure</li>
+              <li>exploratory proofs</li>
+            </ul>
+            <div class="note-actions">
+              <a href="pdfs/problem-corner/Exercise_Problems_in_Mathematics.pdf">Read PDF</a>
+            </div>
           </article>
         </div>
       </section>
@@ -234,6 +320,8 @@
         <a href="https://github.com/Tensorgami">GitHub profile</a>
         |
         <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="mechanisms.html">Mechanisms</a>
         |
         <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
       </p>
