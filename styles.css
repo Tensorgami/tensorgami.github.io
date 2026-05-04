@@ -228,8 +228,12 @@ h3 {
 }
 
 .reading-note p {
-  margin: 0;
+  margin: 0 0 10px;
   color: var(--muted);
+}
+
+.reading-note p:last-child {
+  margin-bottom: 0;
 }
 
 .note-card,
@@ -401,6 +405,16 @@ h3 {
 
 .site-footer p {
   margin: 0;
+}
+
+.redirect-page {
+  max-width: 680px;
+  padding: 72px 0;
+}
+
+.redirect-page p {
+  color: var(--muted);
+  font-size: 1.08rem;
 }
 
 @media (max-width: 900px) {
