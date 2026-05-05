@@ -11,6 +11,7 @@
 
 ## Best artifacts
 
+- [IBM Ponder This July 2010](https://tensorgami.com/notes/ibm-ponder-this-2010.html): trace and companion-matrix solution to the July 2010 IBM Ponder This challenge; Lean theorem `IBMPonderThisFinal.ibm_ponder_this_main`.
 - [Divisibility of Separated Polynomials](https://tensorgami.com/notes/separated-polynomial-divisibility.html): separated polynomial divisibility criterion; Lean theorem `SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer`.
 - [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://tensorgami.com/notes/galois-frobenius-composition-law.html): composition law through generic fibers, Galois descent, and Frobenius reduction; Lean theorem family `SeparatedComposition.separated_composition_criterion_iff`.
 - [Extracting the First Prime Greater than m](https://tensorgami.com/notes/extracting-first-prime.html): finite extraction formula for the least prime above `m`; Lean theorem `ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt`.

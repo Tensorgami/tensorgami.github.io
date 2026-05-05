@@ -19,6 +19,20 @@
   ],
   "artifacts": [
     {
+      "title": "IBM Ponder This July 2010",
+      "type": "exposition+formalization",
+      "subjects": ["number theory", "algebraic number theory"],
+      "mechanisms": ["Pisot rounding", "trace recurrence", "companion-matrix period", "finite modular certificate"],
+      "lean_theorem": "IBMPonderThisFinal.ibm_ponder_this_main",
+      "lean_version": "Lean 4.30.0-rc2",
+      "mathlib_version": "v4.30.0-rc2",
+      "page": "https://tensorgami.com/notes/ibm-ponder-this-2010.html",
+      "pdf": "https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "source": "https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "check": "https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml",
+      "build": "lake build"
+    },
+    {
       "title": "Divisibility of Separated Polynomials",
       "type": "exposition+formalization",
       "subjects": ["algebra", "polynomial rings"],

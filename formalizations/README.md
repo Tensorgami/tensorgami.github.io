@@ -8,6 +8,7 @@ Each folder is an independent Lake project pinned to its own Lean toolchain and
 
 | Note | Lean theorem | Subject | Mechanism | Project |
 | --- | --- | --- | --- | --- |
+| IBM Ponder This July 2010 | `IBMPonderThisFinal.ibm_ponder_this_main` | number theory | Pisot rounding, finite certificate | `ibm-ponder-this-2010` |
 | Divisibility of Separated Polynomials | `SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer` | algebra | normal forms, descent | `separated-polynomial-differences` |
 | A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law | `SeparatedComposition.separated_composition_criterion_iff` | algebra | generic fibers, Frobenius descent | `galois-frobenius-composition-law` |
 | Extracting the First Prime Greater than m | `ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt` | number theory | gcd filtering, finite certificate | `extracting-first-prime` |

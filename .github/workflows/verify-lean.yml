@@ -18,6 +18,26 @@ on:
   workflow_dispatch:
 
 jobs:
+  ibm-ponder-this-2010:
+    name: IBM Ponder This July 2010 note
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch mathlib cache
+        working-directory: formalizations/ibm-ponder-this-2010
+        run: lake exe cache get IBMPonderThis.lean
+
+      - name: Build Lean formalization
+        working-directory: formalizations/ibm-ponder-this-2010
+        run: lake build
+
   disjoint-decomposition:
     name: Disjoint decomposition note
     runs-on: ubuntu-latest

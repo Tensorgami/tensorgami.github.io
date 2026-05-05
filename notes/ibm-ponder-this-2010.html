@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IBM Ponder This July 2010 | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami note on the July 2010 IBM Ponder This challenge, using Pisot rounding, a trace recurrence, and a Lean-checked companion-matrix certificate."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/ibm-ponder-this-2010.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="IBM Ponder This July 2010 | Tensorgami">
+    <meta
+      property="og:description"
+      content="Trace recurrence and companion-matrix solution to the July 2010 IBM Ponder This challenge, with Lean verification of the final divisibility statement."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/ibm-ponder-this-2010.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="IBM Ponder This July 2010 | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Lean-checked trace and companion-matrix certificate for the July 2010 IBM Ponder This challenge."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "A Trace and Companion-Matrix Solution to the July 2010 IBM Ponder This Challenge",
+        "url": "https://tensorgami.com/notes/ibm-ponder-this-2010.html",
+        "datePublished": "2026-05-05",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "IBM Ponder This",
+          "Pisot number",
+          "trace recurrence",
+          "companion matrix",
+          "Lean",
+          "mathlib",
+          "formal verification",
+          "finite certificate"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-corner">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Verified Note</p>
+        <h1 id="note-title">IBM Ponder This July 2010</h1>
+        <p class="hero-copy">
+          A trace and companion-matrix solution to the challenge of finding
+          <code>n</code> such that <code>10^9</code> divides the nearest integer
+          to <code>(1 + 2 cos 20 deg)^n</code>.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Result and mechanism</h2>
+          <p>
+            The note converts a rounding problem into an integer trace
+            congruence, then into a finite companion-matrix certificate.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Main result</h3>
+            <p>
+              The Lean formalization verifies that
+              <code>n = 21699999999</code> satisfies the IBM divisibility
+              condition.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Core mechanism</dt>
+                <dd>Pisot rounding, trace recurrence, companion-matrix period, finite modular certificate</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>IBMPonderThisFinal.ibm_ponder_this_main</code></dd>
+              </div>
+              <div>
+                <dt>Lean and mathlib</dt>
+                <dd>Lean 4.30.0-rc2, mathlib v4.30.0-rc2</dd>
+              </div>
+              <div>
+                <dt>Build command</dt>
+                <dd><code>lake build</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf">PDF</a>
+              <a href="../formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+              <a href="../verification.html">Verification index</a>
+            </div>
+          </article>
+
+          <aside class="reading-note">
+            <strong>Formalization note</strong>
+            <p>
+              The Lean proof verifies the final divisibility theorem end to end.
+              It formalizes the real rounding bridge, the modular matrix
+              certificate, and the recurrence-stitching lemma that identifies
+              the rounded trace sequence with the companion-matrix trace
+              sequence.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

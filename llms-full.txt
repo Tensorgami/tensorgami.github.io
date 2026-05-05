@@ -15,6 +15,14 @@ selective formal verification.
 
 ## Verified artifacts
 
+### IBM Ponder This July 2010
+
+- Page: https://tensorgami.com/notes/ibm-ponder-this-2010.html
+- PDF: https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean
+- Lean theorem: `IBMPonderThisFinal.ibm_ponder_this_main`
+- Mechanisms: Pisot rounding, trace recurrence, companion-matrix period, finite modular certificate.
+
 ### Divisibility of Separated Polynomials
 
 - Page: https://tensorgami.com/notes/separated-polynomial-divisibility.html
