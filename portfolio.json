@@ -8,7 +8,9 @@
     "email": "hkshin@alumni.harvard.edu"
   },
   "focus": [
+    "original proof notes",
     "mathematical exposition",
+    "expository reconstruction",
     "proof mechanisms",
     "Lean formalization",
     "formal verification",

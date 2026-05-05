@@ -16,8 +16,10 @@ Primary files:
 
 Site identity:
 
-Tensorgami is a public mathematical workbench. Its mandate is to make
-mathematical mechanisms explicit, algorithmic, concrete, and inspectable.
+Tensorgami is a public mathematical workbench for original proof notes,
+expository reconstructions, problem sets, and Lean formalizations. Its mandate
+is to make mathematical mechanisms explicit, algorithmic, concrete, and
+inspectable.
 
 Style principles:
 

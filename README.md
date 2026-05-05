@@ -1,10 +1,13 @@
 # Tensorgami
 
-Tensorgami is a public mathematical workbench for expositions, proof notes,
-problem sets, and Lean-checked formalizations. The archive emphasizes
-mechanism-level mathematics: explicit reductions, normal forms, concrete
-decompositions, finite certificates, algorithmic structure, and formal
-verification when it clarifies the argument.
+Tensorgami is a public mathematical workbench for original proof notes,
+expository reconstructions, problem sets, and Lean-checked formalizations. Some
+entries record new arguments, extraction formulas, or finite certificates;
+others rebuild known results to make the mechanism explicit.
+
+The archive emphasizes mechanism-level mathematics: explicit reductions,
+normal forms, concrete decompositions, finite certificates, algorithmic
+structure, and formal verification when it clarifies the argument.
 
 The site is published with GitHub Pages at:
 

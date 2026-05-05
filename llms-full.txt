@@ -1,7 +1,11 @@
 # Tensorgami
 
-Tensorgami is Henry Shin's public mathematical workbench for expositions,
-proof notes, problem sets, Lean formalizations, and explicit proof mechanisms.
+Tensorgami is Henry Shin's public mathematical workbench for original proof
+notes, expository reconstructions, problem sets, Lean formalizations, and
+explicit proof mechanisms. Some entries record new arguments, extraction
+formulas, or finite certificates; others rebuild known results to make the
+mechanism explicit.
+
 The archive emphasizes normal forms, reductions, obstructions, finite
 certificates, algorithmic extraction, concrete decompositions, descent, and
 selective formal verification.

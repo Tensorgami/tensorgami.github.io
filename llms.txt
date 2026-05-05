@@ -1,7 +1,8 @@
 # Tensorgami
 
-> Public mathematical workbench by Henry Shin for expositions, proof notes,
-> problem sets, Lean formalizations, and explicit proof mechanisms.
+> Public mathematical workbench by Henry Shin for original proof notes,
+> expository reconstructions, problem sets, Lean formalizations, and explicit
+> proof mechanisms.
 
 ## Start here
 
