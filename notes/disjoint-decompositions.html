@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Disjoint Decompositions of [0,1) | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami note proving that [0,1) is not a countable disjoint union of closed subsets of the real line, with Lean verification."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/disjoint-decompositions.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Disjoint Decompositions of [0,1) | Tensorgami">
+    <meta
+      property="og:description"
+      content="Boundary obstruction and Baire-category proof with Lean verification."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/disjoint-decompositions.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Disjoint Decompositions of [0,1) | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Boundary obstruction and Baire-category proof with Lean verification."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
+        "url": "https://tensorgami.com/notes/disjoint-decompositions.html",
+        "datePublished": "2026-04-30",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "Baire category",
+          "closed sets",
+          "real analysis",
+          "topology",
+          "Lean",
+          "mathlib",
+          "formal verification"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-corner">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Verified Note</p>
+        <h1 id="note-title">Disjoint Decompositions of [0,1)</h1>
+        <p class="hero-copy">
+          A proof that the half-open interval cannot be written as a countable
+          disjoint union of closed subsets of the real line.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Result and mechanism</h2>
+          <p>
+            The proof isolates a boundary obstruction after compactifying the
+            half-open interval.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Main result</h3>
+            <p>
+              The set <code>[0,1)</code> is not a countable pairwise disjoint
+              union of closed subsets of the real line.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>compactification, endpoint obstruction, Baire category</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>no_pairwiseDisjoint_closed_iUnion_eq_Ico</code></dd>
+              </div>
+              <div>
+                <dt>Lean and mathlib</dt>
+                <dd>Lean 4.30.0-rc2, mathlib v4.30.0-rc2</dd>
+              </div>
+              <div>
+                <dt>Build command</dt>
+                <dd><code>lake build</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf">PDF</a>
+              <a href="../formalizations/disjoint-decomposition/DisjointDecomposition.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+              <a href="../verification.html">Verification index</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -7,9 +7,12 @@ Primary files:
 - `index.html`: homepage/archive
 - `about.html`: about page
 - `mechanisms.html`: mechanism map
+- `verification.html`: verified artifacts index
+- `notes/`: note landing pages
 - `styles.css`: global styling
 - `pdfs/`: mathematical PDFs
 - `formalizations/`: Lean sources
+- `portfolio.json`, `llms.txt`: machine-readable summaries
 
 Site identity:
 

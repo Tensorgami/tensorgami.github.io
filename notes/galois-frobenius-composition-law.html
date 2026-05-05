@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galois-Frobenius Composition Law | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami note on a polynomial composition law through Galois descent, Frobenius reduction, and Lean verification."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/galois-frobenius-composition-law.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Galois-Frobenius Composition Law | Tensorgami">
+    <meta
+      property="og:description"
+      content="Polynomial composition law through Galois descent and Frobenius reduction, with Lean verification."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/galois-frobenius-composition-law.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Galois-Frobenius Composition Law | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Polynomial composition law through Galois descent and Frobenius reduction, with Lean verification."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
+        "url": "https://tensorgami.com/notes/galois-frobenius-composition-law.html",
+        "datePublished": "2026-05-02",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "Galois descent",
+          "Frobenius descent",
+          "polynomial composition",
+          "Lean",
+          "mathlib",
+          "formal verification"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-corner">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Verified Note</p>
+        <h1 id="note-title">Galois-Frobenius Composition Law</h1>
+        <p class="hero-copy">
+          A companion proof of the separated-polynomial composition criterion
+          through generic fibers, Galois descent, and Frobenius reduction.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Result and mechanism</h2>
+          <p>
+            The note studies when separated divisibility forces a common
+            composition structure.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Main result</h3>
+            <p>
+              The proof packages a polynomial composition criterion through
+              generic-fiber relations, splitting fields, Frobenius descent
+              steps, and a cubic square-root functional-equation specialization.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>generic fibers, Galois descent, Frobenius reduction</dd>
+              </div>
+              <div>
+                <dt>Lean theorem family</dt>
+                <dd><code>SeparatedComposition.separated_composition_criterion_iff</code></dd>
+              </div>
+              <div>
+                <dt>Lean and mathlib</dt>
+                <dd>Lean 4.30.0-rc2, mathlib v4.30.0-rc2</dd>
+              </div>
+              <div>
+                <dt>Build command</dt>
+                <dd><code>lake build</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf">PDF</a>
+              <a href="../formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+              <a href="../verification.html">Verification index</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

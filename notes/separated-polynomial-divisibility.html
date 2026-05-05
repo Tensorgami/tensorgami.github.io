@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Divisibility of Separated Polynomials | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami note on separated polynomial divisibility, descent through a common outer polynomial, and the Lean theorem sep_dvd_iff_exists_common_outer."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/separated-polynomial-divisibility.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Divisibility of Separated Polynomials | Tensorgami">
+    <meta
+      property="og:description"
+      content="Separated polynomial divisibility criterion with Lean verification."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/separated-polynomial-divisibility.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Divisibility of Separated Polynomials | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Separated polynomial divisibility criterion with Lean verification."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Divisibility of Separated Polynomials",
+        "url": "https://tensorgami.com/notes/separated-polynomial-divisibility.html",
+        "datePublished": "2026-05-02",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "separated polynomials",
+          "polynomial divisibility",
+          "Lean",
+          "mathlib",
+          "formal verification",
+          "descent",
+          "normal forms"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-corner">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Verified Note</p>
+        <h1 id="note-title">Divisibility of Separated Polynomials</h1>
+        <p class="hero-copy">
+          A criterion for when <code>f(X)-g(Y)</code> divides
+          <code>p(X)-q(Y)</code>, expressed through descent to a common
+          one-variable outer polynomial.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Result and mechanism</h2>
+          <p>
+            The note turns a two-variable divisibility condition into a
+            one-variable descent statement.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Main result</h3>
+            <p>
+              Under the stated hypotheses, <code>f(X)-g(Y)</code> divides
+              <code>p(X)-q(Y)</code> if and only if <code>p</code> and
+              <code>q</code> are obtained by composing <code>f</code> and
+              <code>g</code> with a common outer polynomial.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>free-module residue rectangle and diagonal reduction</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer</code></dd>
+              </div>
+              <div>
+                <dt>Lean and mathlib</dt>
+                <dd>Lean 4.30.0-rc2, mathlib v4.30.0-rc2</dd>
+              </div>
+              <div>
+                <dt>Build command</dt>
+                <dd><code>lake build</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf">PDF</a>
+              <a href="../formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+              <a href="../verification.html">Verification index</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

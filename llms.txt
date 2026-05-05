@@ -1,0 +1,29 @@
+# Tensorgami
+
+> Public mathematical workbench by Henry Shin for expositions, proof notes,
+> problem sets, Lean formalizations, and explicit proof mechanisms.
+
+## Start here
+
+- [Verification](https://tensorgami.com/verification.html): selected verified artifacts, theorem names, Lean source, and CI checks.
+- [Mechanism Map](https://tensorgami.com/mechanisms.html): recurring proof patterns across the archive.
+- [About](https://tensorgami.com/about.html): maintainer, contact, and external links.
+
+## Best artifacts
+
+- [Divisibility of Separated Polynomials](https://tensorgami.com/notes/separated-polynomial-divisibility.html): separated polynomial divisibility criterion; Lean theorem `SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer`.
+- [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://tensorgami.com/notes/galois-frobenius-composition-law.html): composition law through generic fibers, Galois descent, and Frobenius reduction; Lean theorem family `SeparatedComposition.separated_composition_criterion_iff`.
+- [Extracting the First Prime Greater than m](https://tensorgami.com/notes/extracting-first-prime.html): finite extraction formula for the least prime above `m`; Lean theorem `ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt`.
+- [A Note on Disjoint Decompositions of [0,1) into Closed Sets](https://tensorgami.com/notes/disjoint-decompositions.html): boundary obstruction and Baire-category proof; Lean theorem `no_pairwiseDisjoint_closed_iUnion_eq_Ico`.
+
+## Verification
+
+- [Lean formalizations](https://github.com/Tensorgami/tensorgami.github.io/tree/main/formalizations)
+- [GitHub Actions Lean check](https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml)
+- [Machine-readable portfolio](https://tensorgami.com/portfolio.json)
+
+## Contact
+
+- Email: hkshin@alumni.harvard.edu
+- GitHub: https://github.com/Tensorgami
+- ORCID: https://orcid.org/0009-0000-6453-6865

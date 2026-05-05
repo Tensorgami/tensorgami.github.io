@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Extracting the First Prime Greater than m | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami note on a finite arithmetic extraction formula for the least prime above m, with Lean verification."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/extracting-first-prime.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Extracting the First Prime Greater than m | Tensorgami">
+    <meta
+      property="og:description"
+      content="Finite arithmetic extraction formula for the least prime above m, with Lean verification."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/extracting-first-prime.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Extracting the First Prime Greater than m | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Finite arithmetic extraction formula for the least prime above m, with Lean verification."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Extracting the First Prime Greater than m",
+        "url": "https://tensorgami.com/notes/extracting-first-prime.html",
+        "datePublished": "2026-05-01",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "least prime",
+          "number theory",
+          "finite certificate",
+          "Lean",
+          "mathlib",
+          "formal verification"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-corner">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Verified Note</p>
+        <h1 id="note-title">Extracting the First Prime Greater than m</h1>
+        <p class="hero-copy">
+          A finite formula that extracts the least prime above
+          <code>m</code> through gcd filtering and valuation selection.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Result and mechanism</h2>
+          <p>
+            The note converts prime existence above <code>m</code> into an
+            explicit arithmetic extraction.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Main result</h3>
+            <p>
+              For every natural number <code>m >= 3</code>, the extraction
+              formula returns the least prime greater than <code>m</code>.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>factorial congruences, gcd filtering, valuation selection</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt</code></dd>
+              </div>
+              <div>
+                <dt>Lean and mathlib</dt>
+                <dd>Lean 4.30.0-rc2, mathlib v4.30.0-rc2</dd>
+              </div>
+              <div>
+                <dt>Build command</dt>
+                <dd><code>lake build</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf">PDF</a>
+              <a href="../formalizations/extracting-first-prime/ExtractingFirstPrime.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+              <a href="../verification.html">Verification index</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

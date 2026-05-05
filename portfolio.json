@@ -1,0 +1,78 @@
+{
+  "person": {
+    "name": "Henry Shin",
+    "handle": "Tensorgami",
+    "website": "https://tensorgami.com",
+    "github": "https://github.com/Tensorgami",
+    "orcid": "https://orcid.org/0009-0000-6453-6865",
+    "email": "hkshin@alumni.harvard.edu"
+  },
+  "focus": [
+    "mathematical exposition",
+    "proof mechanisms",
+    "Lean formalization",
+    "formal verification",
+    "normal forms",
+    "reductions",
+    "finite certificates",
+    "algorithmic extraction"
+  ],
+  "artifacts": [
+    {
+      "title": "Divisibility of Separated Polynomials",
+      "type": "exposition+formalization",
+      "subjects": ["algebra", "polynomial rings"],
+      "mechanisms": ["free-module residue expansion", "diagonal reduction", "descent"],
+      "lean_theorem": "SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer",
+      "lean_version": "Lean 4.30.0-rc2",
+      "mathlib_version": "v4.30.0-rc2",
+      "page": "https://tensorgami.com/notes/separated-polynomial-divisibility.html",
+      "pdf": "https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "source": "https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "check": "https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml",
+      "build": "lake build"
+    },
+    {
+      "title": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
+      "type": "exposition+formalization",
+      "subjects": ["algebra", "polynomial composition"],
+      "mechanisms": ["generic fibers", "Galois descent", "Frobenius descent"],
+      "lean_theorem": "SeparatedComposition.separated_composition_criterion_iff",
+      "lean_version": "Lean 4.30.0-rc2",
+      "mathlib_version": "v4.30.0-rc2",
+      "page": "https://tensorgami.com/notes/galois-frobenius-composition-law.html",
+      "pdf": "https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "source": "https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "check": "https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml",
+      "build": "lake build"
+    },
+    {
+      "title": "Extracting the First Prime Greater than m",
+      "type": "exposition+formalization",
+      "subjects": ["number theory"],
+      "mechanisms": ["gcd filtering", "valuation selection", "finite certificate"],
+      "lean_theorem": "ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt",
+      "lean_version": "Lean 4.30.0-rc2",
+      "mathlib_version": "v4.30.0-rc2",
+      "page": "https://tensorgami.com/notes/extracting-first-prime.html",
+      "pdf": "https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "source": "https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "check": "https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml",
+      "build": "lake build"
+    },
+    {
+      "title": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
+      "type": "exposition+formalization",
+      "subjects": ["analysis", "topology"],
+      "mechanisms": ["compactification", "boundary obstruction", "Baire category"],
+      "lean_theorem": "no_pairwiseDisjoint_closed_iUnion_eq_Ico",
+      "lean_version": "Lean 4.30.0-rc2",
+      "mathlib_version": "v4.30.0-rc2",
+      "page": "https://tensorgami.com/notes/disjoint-decompositions.html",
+      "pdf": "https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "source": "https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "check": "https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml",
+      "build": "lake build"
+    }
+  ]
+}

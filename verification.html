@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verification | Tensorgami</title>
+    <meta
+      name="description"
+      content="Verified Tensorgami artifacts with theorem names, Lean source, and automated checks."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/verification.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Verification | Tensorgami">
+    <meta
+      property="og:description"
+      content="Verified Tensorgami artifacts with theorem names, Lean source, and automated checks."
+    >
+    <meta property="og:url" content="https://tensorgami.com/verification.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Verification | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Verified Tensorgami artifacts with theorem names, Lean source, and automated checks."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Verification | Tensorgami",
+        "url": "https://tensorgami.com/verification.html",
+        "description": "Verified Tensorgami artifacts with theorem names, Lean source, and automated checks.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865",
+            "https://math.stackexchange.com/users/268083/henry-shin"
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="./#archive">Expositions</a>
+        <a href="./#problem-corner">Problem Sets</a>
+        <a href="mechanisms.html">Mechanisms</a>
+        <a href="verification.html">Verification</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="verification-title">
+        <p class="eyebrow">Verification</p>
+        <h1 id="verification-title">Verified work</h1>
+        <p class="hero-copy">
+          Selected Tensorgami notes with theorem names, Lean source, and
+          automated checks.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="verification-guide-title">
+        <div class="section-heading">
+          <p class="eyebrow">Guide</p>
+          <h2 id="verification-guide-title">What is checked</h2>
+          <p>
+            Lean is used selectively when the formal statement clarifies or
+            certifies a proof mechanism.
+          </p>
+        </div>
+        <div class="entry-list">
+          <aside class="reading-note">
+            <strong>Inspection layer</strong>
+            <p>
+              Each entry below names the mathematical result, the mechanism
+              exposed by the note, and the Lean theorem or theorem family that
+              is checked by GitHub Actions.
+            </p>
+          </aside>
+
+          <article class="note-card">
+            <p class="note-meta">
+              <span>Algebra</span>
+              <span aria-hidden="true">/</span>
+              <time datetime="2026-05-02">Posted May 2, 2026</time>
+            </p>
+            <h3>Divisibility of Separated Polynomials</h3>
+            <p>
+              Criterion for when <code>f(X)-g(Y)</code> divides
+              <code>p(X)-q(Y)</code>, showing that <code>p</code> and
+              <code>q</code> descend through a common outer polynomial.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>free-module residue expansion, diagonal collapse, descent</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="notes/separated-polynomial-divisibility.html">Note page</a>
+              <a href="pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf">PDF</a>
+              <a href="formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+            </div>
+          </article>
+
+          <article class="note-card">
+            <p class="note-meta">
+              <span>Algebra</span>
+              <span aria-hidden="true">/</span>
+              <time datetime="2026-05-02">Posted May 2, 2026</time>
+            </p>
+            <h3>A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law</h3>
+            <p>
+              Companion proof of a separated-polynomial composition criterion
+              using generic fibers, Galois descent, Frobenius reduction, and a
+              cubic square-root functional equation.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>generic fibers, splitting fields, Frobenius descent</dd>
+              </div>
+              <div>
+                <dt>Lean theorem family</dt>
+                <dd><code>SeparatedComposition.separated_composition_criterion_iff</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="notes/galois-frobenius-composition-law.html">Note page</a>
+              <a href="pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf">PDF</a>
+              <a href="formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+            </div>
+          </article>
+
+          <article class="note-card">
+            <p class="note-meta">
+              <span>Number theory</span>
+              <span aria-hidden="true">/</span>
+              <time datetime="2026-05-01">Posted May 1, 2026</time>
+            </p>
+            <h3>Extracting the First Prime Greater than m</h3>
+            <p>
+              Finite arithmetic extraction formula returning the least prime
+              above <code>m</code> for every natural number <code>m >= 3</code>.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>gcd filtering, valuation selection, finite certificate</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="notes/extracting-first-prime.html">Note page</a>
+              <a href="pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf">PDF</a>
+              <a href="formalizations/extracting-first-prime/ExtractingFirstPrime.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+            </div>
+          </article>
+
+          <article class="note-card">
+            <p class="note-meta">
+              <span>Analysis</span>
+              <span aria-hidden="true">/</span>
+              <time datetime="2026-04-30">Posted April 30, 2026</time>
+            </p>
+            <h3>A Note on Disjoint Decompositions of [0,1) into Closed Sets</h3>
+            <p>
+              Proof that the half-open interval cannot be written as a
+              countable disjoint union of closed subsets of the real line.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Mechanism</dt>
+                <dd>compactification, boundary obstruction, Baire category</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>no_pairwiseDisjoint_closed_iUnion_eq_Ico</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="notes/disjoint-decompositions.html">Note page</a>
+              <a href="pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf">PDF</a>
+              <a href="formalizations/disjoint-decomposition/DisjointDecomposition.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="mechanisms.html">Mechanisms</a>
+        |
+        <a href="verification.html">Verification</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

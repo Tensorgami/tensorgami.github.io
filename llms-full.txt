@@ -1,0 +1,61 @@
+# Tensorgami
+
+Tensorgami is Henry Shin's public mathematical workbench for expositions,
+proof notes, problem sets, Lean formalizations, and explicit proof mechanisms.
+The archive emphasizes normal forms, reductions, obstructions, finite
+certificates, algorithmic extraction, concrete decompositions, descent, and
+selective formal verification.
+
+## Main pages
+
+- https://tensorgami.com/
+- https://tensorgami.com/mechanisms.html
+- https://tensorgami.com/verification.html
+- https://tensorgami.com/about.html
+
+## Verified artifacts
+
+### Divisibility of Separated Polynomials
+
+- Page: https://tensorgami.com/notes/separated-polynomial-divisibility.html
+- PDF: https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean
+- Lean theorem: `SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer`
+- Mechanisms: free-module residue expansion, diagonal reduction, descent.
+
+### A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law
+
+- Page: https://tensorgami.com/notes/galois-frobenius-composition-law.html
+- PDF: https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean
+- Lean theorem family: `SeparatedComposition.separated_composition_criterion_iff`
+- Mechanisms: generic fibers, Galois descent, Frobenius reduction.
+
+### Extracting the First Prime Greater than m
+
+- Page: https://tensorgami.com/notes/extracting-first-prime.html
+- PDF: https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/extracting-first-prime/ExtractingFirstPrime.lean
+- Lean theorem: `ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt`
+- Mechanisms: gcd filtering, valuation selection, finite certificate.
+
+### A Note on Disjoint Decompositions of [0,1) into Closed Sets
+
+- Page: https://tensorgami.com/notes/disjoint-decompositions.html
+- PDF: https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/disjoint-decomposition/DisjointDecomposition.lean
+- Lean theorem: `no_pairwiseDisjoint_closed_iUnion_eq_Ico`
+- Mechanisms: compactification, boundary obstruction, Baire category.
+
+## Formalization environment
+
+The formalized artifacts are independent Lake projects checked with Lean
+4.30.0-rc2 and mathlib v4.30.0-rc2. GitHub Actions runs `lake build` for each
+formalization project.
+
+## External identifiers
+
+- GitHub: https://github.com/Tensorgami
+- ORCID: https://orcid.org/0009-0000-6453-6865
+- Math StackExchange: https://math.stackexchange.com/users/268083/henry-shin
+- Contact: hkshin@alumni.harvard.edu

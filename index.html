@@ -25,7 +25,36 @@
     >
     <meta name="theme-color" content="#f7f4ee">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=mechanisms">
+    <link rel="stylesheet" href="styles.css?v=verification">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://tensorgami.com/about.html#henry-shin",
+            "name": "Henry Shin",
+            "url": "https://tensorgami.com/about.html",
+            "email": "mailto:hkshin@alumni.harvard.edu",
+            "sameAs": [
+              "https://github.com/Tensorgami",
+              "https://orcid.org/0009-0000-6453-6865",
+              "https://math.stackexchange.com/users/268083/henry-shin"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tensorgami.com/#website",
+            "name": "Tensorgami",
+            "url": "https://tensorgami.com/",
+            "description": "A public mathematical workbench for making proof mechanisms explicit, algorithmic, concrete, and inspectable.",
+            "creator": {
+              "@id": "https://tensorgami.com/about.html#henry-shin"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -34,6 +63,7 @@
         <a href="#archive">Expositions</a>
         <a href="#problem-corner">Problem Sets</a>
         <a href="mechanisms.html">Mechanisms</a>
+        <a href="verification.html">Verification</a>
         <a href="about.html">About</a>
       </nav>
     </header>
@@ -119,6 +149,7 @@
               <li>diagonal collapse</li>
             </ul>
             <div class="note-actions">
+              <a href="notes/separated-polynomial-divisibility.html">Note page</a>
               <a href="pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf">Read PDF</a>
               <a href="formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean">Lean source</a>
               <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
@@ -159,6 +190,7 @@
               <li>composition law</li>
             </ul>
             <div class="note-actions">
+              <a href="notes/galois-frobenius-composition-law.html">Note page</a>
               <a href="pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf">Read PDF</a>
               <a href="formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean">Lean source</a>
               <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
@@ -220,6 +252,7 @@
               <li>finite certificate</li>
             </ul>
             <div class="note-actions">
+              <a href="notes/extracting-first-prime.html">Note page</a>
               <a href="pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf">Read PDF</a>
               <a href="formalizations/extracting-first-prime/ExtractingFirstPrime.lean">Lean source</a>
               <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
@@ -257,6 +290,7 @@
               <li>Baire mechanism</li>
             </ul>
             <div class="note-actions">
+              <a href="notes/disjoint-decompositions.html">Note page</a>
               <a href="pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf">Read PDF</a>
               <a href="formalizations/disjoint-decomposition/DisjointDecomposition.lean">Lean source</a>
               <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
@@ -343,6 +377,8 @@
         <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
         |
         <a href="mechanisms.html">Mechanisms</a>
+        |
+        <a href="verification.html">Verification</a>
         |
         <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
       </p>

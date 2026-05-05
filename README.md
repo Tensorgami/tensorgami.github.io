@@ -17,9 +17,12 @@ The repository is intentionally simple:
 - `index.html`: homepage and archive
 - `about.html`: about page
 - `mechanisms.html`: mechanism map
+- `verification.html`: verified artifacts, theorem names, and Lean checks
+- `notes/`: HTML landing pages for selected notes
 - `styles.css`: global styling
 - `pdfs/`: mathematical PDFs
 - `formalizations/`: Lean sources
+- `portfolio.json`, `llms.txt`: machine-readable summaries
 - `.github/workflows/`: Lean checks
 
 No build system is needed for the static site; GitHub Pages serves the files

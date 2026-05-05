@@ -322,6 +322,42 @@ h3 {
   font-weight: 700;
 }
 
+.fact-list {
+  display: grid;
+  gap: 0;
+  margin: 0 0 18px;
+}
+
+.fact-list div {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.fact-list div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.fact-list dt {
+  margin: 0;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.fact-list dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.fact-list code {
+  color: var(--ink);
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
+
 .note-actions {
   display: flex;
   flex-wrap: wrap;

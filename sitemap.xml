@@ -2,14 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tensorgami.com/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-05</lastmod>
   </url>
   <url>
     <loc>https://tensorgami.com/about.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-05</lastmod>
   </url>
   <url>
     <loc>https://tensorgami.com/mechanisms.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tensorgami.com/verification.html</loc>
+    <lastmod>2026-05-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tensorgami.com/notes/separated-polynomial-divisibility.html</loc>
+    <lastmod>2026-05-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tensorgami.com/notes/galois-frobenius-composition-law.html</loc>
+    <lastmod>2026-05-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tensorgami.com/notes/extracting-first-prime.html</loc>
+    <lastmod>2026-05-05</lastmod>
+  </url>
+  <url>
+    <loc>https://tensorgami.com/notes/disjoint-decompositions.html</loc>
+    <lastmod>2026-05-05</lastmod>
   </url>
 </urlset>
