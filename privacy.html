@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy | Tensorgami</title>
+    <meta
+      name="description"
+      content="Privacy note for Tensorgami's minimal self-hosted analytics."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/privacy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Privacy | Tensorgami">
+    <meta
+      property="og:description"
+      content="Privacy note for Tensorgami's minimal self-hosted analytics."
+    >
+    <meta property="og:url" content="https://tensorgami.com/privacy.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Privacy note for Tensorgami's minimal self-hosted analytics."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=problemsets-20260508">
+    <script src="visitor.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="./#archive">Expositions</a>
+        <a href="./#problem-sets">Problem Sets</a>
+        <a href="mechanisms.html">Mechanisms</a>
+        <a href="verification.html">Verification</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="privacy-title">
+        <p class="eyebrow">Privacy</p>
+        <h1 id="privacy-title">Privacy</h1>
+        <p class="hero-copy">
+          A short note on analytics and contact data.
+        </p>
+      </section>
+
+      <section class="content-section about-section" aria-labelledby="analytics-title">
+        <div class="section-heading">
+          <p class="eyebrow">Analytics</p>
+          <h2 id="analytics-title">Minimal analytics</h2>
+        </div>
+        <div class="entry-list">
+          <article class="about-copy">
+            <p>
+              Tensorgami uses minimal self-hosted analytics for pageviews and
+              PDF-link clicks. It does not use advertising trackers, analytics
+              cookies, or public visitor counters.
+            </p>
+            <p>
+              The site script sends the event type, host, path, page title,
+              referrer, and browser timezone to a Cloudflare Worker endpoint
+              maintained for Tensorgami. This is used to understand whether
+              pages and PDFs are being reached. The script does not set cookies
+              or create a persistent visitor identifier.
+            </p>
+            <p>
+              Cloudflare may process ordinary request metadata as part of
+              delivering the endpoint. Email sent to the listed contact address
+              is handled as ordinary email.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section about-section" aria-labelledby="opt-out-title">
+        <div class="section-heading">
+          <p class="eyebrow">Opt Out</p>
+          <h2 id="opt-out-title">Browser setting</h2>
+        </div>
+        <div class="entry-list">
+          <article class="about-copy">
+            <p>
+              To turn off Tensorgami analytics in this browser, use
+              <a href="privacy.html?analytics=off">this opt-out link</a>. It
+              stores <code>tensorgamiAnalyticsOptOut = "1"</code> in local
+              storage.
+            </p>
+            <p>
+              To restore analytics in this browser, use
+              <a href="privacy.html?analytics=on">this opt-in link</a>. Browser
+              do-not-track signals are also respected.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved unless otherwise noted.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="mechanisms.html">Mechanisms</a>
+        |
+        <a href="verification.html">Verification</a>
+        |
+        <a href="privacy.html">Privacy</a>
+        |
+        <a href="license.html">License</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

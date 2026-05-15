@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Citation metadata for Tensorgami."
+title: "Tensorgami: A Mathematical Workbench for Explicit Proof Mechanisms"
+authors:
+  - family-names: Shin
+    given-names: Henry
+    orcid: "https://orcid.org/0009-0000-6453-6865"
+url: "https://tensorgami.com"
+repository-code: "https://github.com/Tensorgami/tensorgami.github.io"
+keywords:
+  - mathematical exposition
+  - Lean
+  - mathlib
+  - formal verification
+  - proof mechanisms
+  - theorem proving
+  - measure theory
+  - convergence in measure
+  - normal forms
+  - finite certificates

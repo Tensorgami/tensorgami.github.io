@@ -1,0 +1,44 @@
+# Tensorgami
+
+> Public mathematical workbench by Henry Shin for proof notes,
+> expository reconstructions, problem sets, Lean formalizations, and explicit
+> proof mechanisms.
+
+## Start here
+
+- [Verification](https://tensorgami.com/verification.html): selected verified artifacts, theorem names, Lean source, and CI checks.
+- [Mechanism Map](https://tensorgami.com/mechanisms.html): recurring proof patterns across the archive.
+- [About](https://tensorgami.com/about.html): maintainer, contact, and external links.
+- [Privacy](https://tensorgami.com/privacy.html): analytics disclosure and browser opt-out.
+- [License](https://tensorgami.com/license.html): reuse terms.
+
+## Selected artifacts
+
+- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html): new measurable-weight construction from pointwise convergence to conull uniformization and convergence in measure; Lean theorem `PointwiseWeighting.exists_conull_pos_measurable_weight_uniformOn_tendstoInMeasure_of_ae_tendsto`.
+- [IBM Ponder This July 2010](https://tensorgami.com/notes/ibm-ponder-this-2010.html): independent trace and companion-matrix solution to the July 2010 IBM Ponder This challenge; Lean theorem `IBMPonderThisFinal.ibm_ponder_this_main`.
+- [Divisibility of Separated Polynomials](https://tensorgami.com/notes/separated-polynomial-divisibility.html): new common-outer-polynomial divisibility criterion; Lean theorem `SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer`.
+- [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://tensorgami.com/notes/galois-frobenius-composition-law.html): Galois-descent and Frobenius-reduction viewpoint on a composition law; Lean theorem family `SeparatedComposition.separated_composition_criterion_iff`.
+- [Normality, Coherent Extension, Tensor Operations, and Affineness](https://tensorgami.com/notes/hartshorne-ii-5-14-18.html): independent solutions to Hartshorne Algebraic Geometry Chapter II Section 5 Exercises 14-18.
+- [Extracting the First Prime Greater than m](https://tensorgami.com/notes/extracting-first-prime.html): new finite extraction formula for the least prime above `m`; Lean theorem `ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt`.
+- [A Note on Disjoint Decompositions of [0,1) into Closed Sets](https://tensorgami.com/notes/disjoint-decompositions.html): independent proof of the non-decomposition result via endpoint obstruction and Baire category; Lean theorem `no_pairwiseDisjoint_closed_iUnion_eq_Ico`.
+- [Lebesgue's Criterion for Riemann Integrability](https://tensorgami.com/notes/lebesgue-riemann-integrability.html): expository reconstruction of the sufficiency direction using compactness and finite partitions.
+- [Selected Problems in Discrete Mathematics and Analysis](https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html): problem set in counting, covering systems, recurrences, asymptotic series, and finite information encoding.
+
+## Selected problem records
+
+- [Bilkent Mathematical Problem of the Month, November 2008](https://math.bilkent.edu.tr/Problem/problem_2008.html): one of three listed solvers for the November 2008 white-sequence problem; a Tensorgami exposition and Lean formalization are planned. Sources: [problem](https://math.bilkent.edu.tr/Problem/0810q.pdf), [solution](https://math.bilkent.edu.tr/Problem/0811a.pdf).
+- [IBM Ponder This, July 2010](https://research.ibm.com/blog/ponder-this-july-2010): listed solver; Tensorgami exposition and Lean formalization available at [IBM Ponder This July 2010](https://tensorgami.com/notes/ibm-ponder-this-2010.html).
+- [IBM Ponder This, August 2010](https://research.ibm.com/blog/ponder-this-august-2010): listed solver for the Lilliput ID-number challenge; a Tensorgami exposition and Lean formalization are planned.
+
+## Verification
+
+- [Lean formalizations](https://github.com/Tensorgami/tensorgami.github.io/tree/main/formalizations)
+- [GitHub Actions Lean check](https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml)
+- [Machine-readable portfolio](https://tensorgami.com/portfolio.json)
+
+## Contact
+
+- Email: hkshin@alumni.harvard.edu
+- GitHub: https://github.com/Tensorgami
+- ORCID: https://orcid.org/0009-0000-6453-6865
+- LinkedIn: https://www.linkedin.com/in/henry-k-shin/

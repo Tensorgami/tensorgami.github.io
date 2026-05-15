@@ -1,0 +1,597 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\dd}{\,d}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{A Weighting Argument for Pointwise Convergence\\to Convergence in Measure}
+\author{Henry Shin}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Let $(f_n)$ be a sequence of real-valued Lebesgue measurable functions on
+$\R$ such that $f_n(x)\to 0$ for every $x\in\R$.  We give a detailed proof
+that there exists a strictly positive measurable function $h$ such that
+$f_nh\to 0$ in measure.  The main proof is an expanded version of a
+Math StackExchange answer of the author: it uses a finite-measure exhaustion,
+Egorov's theorem on each finite-measure piece, and a pointwise-boundedness
+stratification.  The construction actually proves the stronger conclusion
+that $f_nh\to 0$ uniformly on a conull measurable subset of $\R$.
+We also include a shorter dominated-convergence proof of the original
+statement and record the corresponding sigma-finite version.
+\end{abstract}
+
+\section{Introduction}
+
+On a finite measure space, almost everywhere convergence implies convergence
+in measure.  On an infinite measure space, such as $(\R,m)$ with Lebesgue
+measure, this implication is false in general.  The problem considered here
+asks whether one can multiply by a positive measurable weight in order to
+force convergence in measure.
+
+The answer is yes.  More precisely, if $f_n:\R\to\R$ are measurable and
+$f_n(x)\to 0$ pointwise, then there is a strictly positive measurable
+function $h:\R\to(0,\infty)$ such that
+\[
+        f_nh\longrightarrow 0
+\]
+in measure.  The construction below proves something stronger: $h$ can be
+chosen so that $f_nh\to 0$ uniformly on a measurable set whose complement has
+Lebesgue measure zero.
+
+The key idea is to combine two elementary consequences of pointwise
+convergence.  First, after decomposing $\R$ into countably many finite-measure
+sets, Egorov's theorem gives countably many large pieces on which the
+convergence is uniform.  Second, at each fixed point $x$, the scalar sequence
+$(f_n(x))_n$ is bounded, so $\R$ is the union of the level sets on which the
+pointwise envelope $\sup_n |f_n|$ is bounded.  The weight $h$ is then made
+small on the intersections of these two decompositions.
+
+Throughout this note, convergence in measure on $\R$ means the global
+condition
+\[
+        m\bigl(\{x\in\R: |g_n(x)|>\eps\}\bigr)\longrightarrow 0
+        \qquad\text{for every }\eps>0.
+\]
+Equivalently, one may use $\geq \eps$ instead of $>\eps$.
+
+\section{The strengthened result on \texorpdfstring{$\R$}{R}}
+
+We first state the stronger form proved by the weighting construction.
+
+\begin{theorem}[Conull uniformization by a positive weight]\label{thm:main-R}
+Let $f_n:\R\to\R$ be Lebesgue measurable functions such that
+\[
+        f_n(x)\to 0
+        \qquad\text{for every }x\in\R.
+\]
+Then there exist a measurable set $A\subseteq\R$ and a strictly positive
+finite-valued measurable function $h:\R\to(0,\infty)$ such that
+\[
+        m(\R\setminus A)=0
+\]
+and
+\[
+        \sup_{x\in A}|f_n(x)h(x)|\longrightarrow 0.
+\]
+In particular, $f_nh\to 0$ in measure on $\R$.
+\end{theorem}
+
+The proof is split into two organizing lemmas.
+
+\begin{lemma}[Countably many uniform-convergence pieces]\label{lem:egorov-pieces}
+There exist measurable sets $A_1,A_2,\dots\subseteq\R$ such that
+\[
+        m\left(\R\setminus \bigcup_{i=1}^\infty A_i\right)=0,
+\]
+and such that $f_n\to 0$ uniformly on each $A_i$.
+\end{lemma}
+
+\begin{proof}
+Choose a finite-measure exhaustion of $\R$; for example, take
+\[
+        E_r=[-r,r],\qquad r\geq 1.
+\]
+For each pair $r,k\geq 1$, Egorov's theorem applied on $E_r$ gives a
+measurable set $A_{r,k}\subseteq E_r$ such that
+\[
+        m(E_r\setminus A_{r,k})<\frac{1}{k}
+\]
+and $f_n\to 0$ uniformly on $A_{r,k}$.
+
+For fixed $r$, we have
+\[
+        E_r\setminus \bigcup_{k=1}^\infty A_{r,k}
+        =\bigcap_{k=1}^\infty (E_r\setminus A_{r,k}),
+\]
+and hence, for every $k$,
+\[
+        m\left(E_r\setminus \bigcup_{k=1}^\infty A_{r,k}\right)
+        \leq m(E_r\setminus A_{r,k})<\frac{1}{k}.
+\]
+Therefore
+\[
+        m\left(E_r\setminus \bigcup_{k=1}^\infty A_{r,k}\right)=0.
+\]
+Let
+\[
+        A:=\bigcup_{r,k\geq 1}A_{r,k}.
+\]
+Since $\R=\bigcup_r E_r$, it follows that
+\[
+        \R\setminus A
+        \subseteq
+        \bigcup_{r=1}^\infty
+        \left(E_r\setminus \bigcup_{k=1}^\infty A_{r,k}\right),
+\]
+so $m(\R\setminus A)=0$.  Finally, reindex the countable family
+$\{A_{r,k}:r,k\geq 1\}$ as $A_1,A_2,\dots$.  Each reindexed set is measurable,
+and $f_n\to 0$ uniformly on each one.
+\end{proof}
+
+\begin{lemma}[Pointwise boundedness stratification]\label{lem:boundedness-pieces}
+Define
+\[
+        M(x):=\sup_{n\geq 1}|f_n(x)|.
+\]
+Then $M$ is measurable and finite everywhere.  Consequently, the sets
+\[
+        B_j:=\{x\in\R:M(x)\leq j\},\qquad j\geq 1,
+\]
+are measurable and satisfy
+\[
+        \R=\bigcup_{j=1}^\infty B_j.
+\]
+Moreover, on $B_j$ one has
+\[
+        |f_n(x)|\leq j
+        \qquad\text{for every }n\geq 1.
+\]
+\end{lemma}
+
+\begin{proof}
+Since each $f_n$ is measurable, so is $|f_n|$, and therefore the countable
+supremum
+\[
+        M=\sup_{n\geq 1}|f_n|
+\]
+is measurable.  For each fixed $x\in\R$, the numerical sequence
+$(f_n(x))_{n\geq 1}$ converges to $0$, hence is bounded.  Thus $M(x)<\infty$
+for every $x$.  The remaining assertions follow immediately from the
+definition of $B_j$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main-R}]
+Let $A=\bigcup_i A_i$, where the sets $A_i$ come from
+Lemma \ref{lem:egorov-pieces}.  Let $B_j$ be the measurable sets from
+Lemma \ref{lem:boundedness-pieces}.  Define
+\[
+        h(x)
+        :=
+        \sum_{i,j\geq 1}\frac{1}{j2^{ij}}\one_{A_i\cap B_j}(x)
+        +\one_{\R\setminus A}(x).
+\]
+This is a nonnegative measurable function, being a countable sum of
+nonnegative measurable functions.
+
+We first check that $h$ is finite-valued and strictly positive.  Since
+\[
+        \sum_{i,j\geq 1}\frac{1}{j2^{ij}}
+        \leq
+        \sum_{i,j\geq 1}\frac{1}{2^{ij}}
+        =
+        \sum_{i=1}^\infty \frac{1}{2^i-1}
+        \leq
+        \sum_{i=1}^\infty \frac{1}{2^{i-1}}
+        =2,
+\]
+the defining series is bounded above by $2$ everywhere.  Hence $h$ is finite.
+If $x\in\R\setminus A$, then $h(x)\geq 1$.  If $x\in A$, then
+$x\in A_i$ for some $i$, and since $\R=\bigcup_j B_j$, also $x\in B_j$ for
+some $j$.  The corresponding summand is then positive.  Thus
+$h(x)>0$ for every $x\in\R$.
+
+It remains to prove uniform convergence on $A$.  Fix $\eps>0$.  Because
+\[
+        \sum_{i,j\geq 1}2^{-ij}<\infty,
+\]
+we may choose $s\geq 1$ so large that
+\[
+        \sum_{\max\{i,j\}>s}2^{-ij}<\frac{\eps}{2}.
+\]
+For $x\in A$, the term $\one_{\R\setminus A}(x)$ vanishes, and therefore
+\[
+\begin{aligned}
+        |f_n(x)h(x)|
+        &\leq
+        \sum_{i,j\geq 1}
+        \frac{|f_n(x)|}{j2^{ij}}\one_{A_i\cap B_j}(x) \\
+        &=
+        \sum_{1\leq i,j\leq s}
+        \frac{|f_n(x)|}{j2^{ij}}\one_{A_i\cap B_j}(x)
+        +
+        \sum_{\max\{i,j\}>s}
+        \frac{|f_n(x)|}{j2^{ij}}\one_{A_i\cap B_j}(x).
+\end{aligned}
+\]
+On $A_i\cap B_j$, Lemma \ref{lem:boundedness-pieces} gives
+$|f_n(x)|\leq j$.  Hence the tail is bounded uniformly in $x\in A$ and
+$n$ by
+\[
+        \sum_{\max\{i,j\}>s}2^{-ij}<\frac{\eps}{2}.
+\]
+For the finite block, we have
+\[
+\begin{aligned}
+        \sup_{x\in A}
+        \sum_{1\leq i,j\leq s}
+        \frac{|f_n(x)|}{j2^{ij}}\one_{A_i\cap B_j}(x)
+        &\leq
+        \sum_{1\leq i,j\leq s}
+        \frac{1}{j2^{ij}}\sup_{x\in A_i}|f_n(x)|.
+\end{aligned}
+\]
+For each fixed $i$, $f_n\to 0$ uniformly on $A_i$, and the sum above has only
+finitely many indices.  Therefore the finite block tends to $0$ uniformly on
+$A$.  Thus there exists $N$ such that for all $n\geq N$,
+\[
+        \sup_{x\in A}
+        \sum_{1\leq i,j\leq s}
+        \frac{|f_n(x)|}{j2^{ij}}\one_{A_i\cap B_j}(x)
+        <\frac{\eps}{2}.
+\]
+Combining the finite-block estimate with the tail estimate gives
+\[
+        |f_n(x)h(x)|<\eps
+        \qquad\text{for all }x\in A\text{ and all }n\geq N.
+\]
+Hence
+\[
+        \sup_{x\in A}|f_n(x)h(x)|\to 0.
+\]
+
+Finally, since $m(\R\setminus A)=0$, uniform convergence on $A$ implies
+convergence in measure.  Indeed, given $\eps>0$, for all sufficiently large
+$n$,
+\[
+        \{x\in\R:|f_n(x)h(x)|>\eps\}
+        \subseteq \R\setminus A,
+\]
+and the right-hand side has measure zero.  Therefore $f_nh\to 0$ in measure.
+\end{proof}
+
+\section{A bookkeeping-light version of the same construction}
+
+The double series in the preceding proof is one natural way to combine the
+Egorov pieces $A_i$ and the boundedness pieces $B_j$.  A slightly cleaner
+presentation is obtained by first making the intersections disjoint.
+
+Enumerate all pairs $(i,j)\in\N^2$ as
+\[
+        (i_1,j_1),(i_2,j_2),(i_3,j_3),\dots,
+\]
+and set
+\[
+        C_p:=A_{i_p}\cap B_{j_p}.
+\]
+Now disjointify these sets by defining
+\[
+        D_1=C_1,
+        \qquad
+        D_p=C_p\setminus \bigcup_{q<p}C_q
+        \quad(p\geq 2).
+\]
+Then the $D_p$ are measurable, pairwise disjoint, and
+\[
+        A=\bigcup_{p=1}^\infty D_p.
+\]
+Moreover, if $x\in D_p$, then $x\in A_{i_p}$ and $x\in B_{j_p}$, so
+$f_n\to 0$ uniformly on $D_p$ and
+\[
+        |f_n(x)|\leq j_p
+        \qquad (x\in D_p,\ n\geq 1).
+\]
+Define instead
+\[
+        \widetilde h(x)
+        :=
+        \sum_{p=1}^\infty \frac{1}{p j_p}\one_{D_p}(x)
+        +\one_{\R\setminus A}(x).
+\]
+Because the $D_p$ are disjoint, this simply says that
+\[
+        \widetilde h(x)=\frac{1}{p j_p}\quad\text{if }x\in D_p,
+        \qquad
+        \widetilde h(x)=1\quad\text{if }x\notin A.
+\]
+Thus $\widetilde h$ is measurable, finite-valued, and strictly positive.
+
+The proof of uniform convergence is now particularly transparent.  Fix
+$\eps>0$ and choose $P$ so large that $1/P<\eps$.  If $p>P$ and $x\in D_p$,
+then for every $n$,
+\[
+        |f_n(x)\widetilde h(x)|
+        \leq j_p\cdot \frac{1}{p j_p}
+        =\frac{1}{p}
+        <\eps.
+\]
+On the finite union $D_1\cup\cdots\cup D_P$, uniform convergence follows from
+uniform convergence on the corresponding finitely many sets $A_{i_p}$.  More
+explicitly, for each $p\leq P$, choose $N_p$ so that
+\[
+        \sup_{x\in D_p}|f_n(x)|<\eps p j_p
+        \qquad(n\geq N_p).
+\]
+With $N=\max_{1\leq p\leq P}N_p$, we get for every $n\geq N$ and every
+$x\in D_p$, $p\leq P$,
+\[
+        |f_n(x)\widetilde h(x)|
+        <\eps.
+\]
+Together with the tail estimate for $p>P$, this proves
+\[
+        \sup_{x\in A}|f_n(x)\widetilde h(x)|\leq \eps
+\]
+for all sufficiently large $n$.  Hence $f_n\widetilde h\to 0$ uniformly on
+$A$, and therefore in measure.
+
+\begin{remark}
+This disjointified proof is the same idea as the double-series proof.  The
+sets $A_i$ encode where convergence is already uniform; the sets $B_j$ encode
+where the whole sequence is uniformly bounded; and the coefficients of the
+weight shrink sufficiently fast as one moves through the countable list of
+pieces.
+\end{remark}
+
+\section{A shorter proof of the original convergence-in-measure statement}
+
+The stronger conull-uniform result is useful conceptually, but the original
+question also has a concise dominated-convergence proof.
+
+Let
+\[
+        M(x):=\sup_{n\geq 1}|f_n(x)|.
+\]
+As above, $M$ is measurable and finite everywhere.  Set
+\[
+        g(x):=e^{-|x|}
+\]
+and define
+\[
+        h_0(x):=\frac{g(x)}{1+M(x)}.
+\]
+Then $h_0$ is measurable and strictly positive.  Moreover,
+\[
+        |f_n(x)h_0(x)|
+        =|f_n(x)|\frac{g(x)}{1+M(x)}
+        \leq g(x).
+\]
+Since $g\in L^1(\R)$ and $f_n(x)h_0(x)\to 0$ pointwise, the dominated
+convergence theorem gives
+\[
+        \int_{\R}|f_nh_0|\,dm\longrightarrow 0.
+\]
+Thus $f_nh_0\to 0$ in $L^1(\R)$, and hence in measure, since Markov's
+inequality gives
+\[
+        m\bigl(\{x\in\R:|f_n(x)h_0(x)|>\eps\}\bigr)
+        \leq
+        \frac{1}{\eps}\int_{\R}|f_nh_0|\,dm
+        \longrightarrow 0
+\]
+for every $\eps>0$.
+
+\begin{remark}
+The dominated-convergence proof is shorter, but it proves a different kind of
+strengthening: $L^1$ convergence rather than uniform convergence on a conull
+set.  The Egorov-based construction is more structural.  It shows that after
+multiplication by a positive measurable weight, the convergence can be made
+uniform away from a null set, even though the underlying measure space is
+infinite.
+\end{remark}
+
+\section{The sigma-finite form}
+
+Nothing in the Egorov argument is special to the topology of $\R$.  The
+relevant measure-theoretic hypothesis is sigma-finiteness.
+
+\begin{theorem}[Sigma-finite version]\label{thm:sigma-finite}
+Let $(X,\mc A,\mu)$ be a sigma-finite measure space, and let
+$f_n:X\to\R$ be measurable functions such that $f_n(x)\to 0$ for
+$\mu$-almost every $x\in X$.  Then there exist a measurable set $A\subseteq X$
+with $\mu(X\setminus A)=0$ and a strictly positive finite-valued measurable
+function $h:X\to(0,\infty)$ such that
+\[
+        \sup_{x\in A}|f_n(x)h(x)|\longrightarrow 0.
+\]
+Consequently $f_nh\to 0$ in measure.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+        X_0:=\{x\in X:f_n(x)\to 0\}.
+\]
+This set is measurable, since
+\[
+        X_0=
+        \bigcap_{\ell=1}^\infty
+        \bigcup_{N=1}^\infty
+        \bigcap_{n\geq N}\{x\in X:|f_n(x)|<1/\ell\},
+\]
+and it is conull by hypothesis.  Choose a countable cover
+$X=\bigcup_{r=1}^\infty E_r$ with $\mu(E_r)<\infty$.  Applying Egorov's
+theorem on each finite-measure set $E_r\cap X_0$, exactly as in
+Lemma \ref{lem:egorov-pieces}, gives countably many measurable sets
+$A_1,A_2,\dots\subseteq X_0$ such that
+\[
+        \mu\left(X\setminus \bigcup_{i=1}^\infty A_i\right)=0,
+\]
+and $f_n\to 0$ uniformly on each $A_i$.  Put
+\[
+        A:=\bigcup_{i=1}^\infty A_i.
+\]
+
+On $X_0$, define the envelope
+\[
+        M(x):=\sup_{n\geq 1}|f_n(x)|.
+\]
+It is finite on $X_0$.  For $j\geq 1$, define
+\[
+        B_j:=X_0\cap\{x\in X:M(x)\leq j\}.
+\]
+Then the $B_j$ are measurable, $X_0=\bigcup_j B_j$, and
+$|f_n|\leq j$ on $B_j$ for all $n$.
+
+Now define
+\[
+        h(x)
+        :=
+        \sum_{i,j\geq 1}\frac{1}{j2^{ij}}\one_{A_i\cap B_j}(x)
+        +\one_{X\setminus A}(x).
+\]
+The same estimates as in the proof of Theorem \ref{thm:main-R} show that
+$h$ is measurable, finite-valued, strictly positive everywhere, and that
+$f_nh\to 0$ uniformly on $A$.  Since $\mu(X\setminus A)=0$, convergence in
+measure follows.
+\end{proof}
+
+The shorter $L^1$ proof also has a sigma-finite version.
+
+\begin{proposition}[Sigma-finite dominated-convergence proof]\label{prop:l1-sigma-finite}
+Let $(X,\mc A,\mu)$ be sigma-finite, and suppose $f_n:X\to\R$ are measurable
+and $f_n\to 0$ almost everywhere.  Then there is a strictly positive
+finite-valued measurable function $h$ such that
+\[
+        \int_X |f_nh|\,d\mu\longrightarrow 0.
+\]
+In particular, $f_nh\to 0$ in measure.
+\end{proposition}
+
+\begin{proof}
+Let $X_0=\{x:f_n(x)\to 0\}$, and let
+\[
+        M(x):=\sup_{n\geq 1}|f_n(x)|.
+\]
+The function $M$ is an extended-valued measurable function and is finite on
+$X_0$.  Define the finite-valued measurable function
+\[
+        \widetilde M(x):=
+        \begin{cases}
+        M(x), & x\in X_0,\\
+        0, & x\notin X_0.
+        \end{cases}
+\]
+
+Since $\mu$ is sigma-finite, choose measurable sets $E_r$ with
+$X=\bigcup_r E_r$ and $\mu(E_r)<\infty$.  Passing to the disjoint refinement
+\[
+        F_1=E_1,
+        \qquad
+        F_r=E_r\setminus\bigcup_{q<r}E_q\quad(r\geq 2),
+\]
+we obtain a measurable partition of $X$ with $\mu(F_r)<\infty$.  Define
+\[
+        g(x):=\sum_{r=1}^\infty
+        \frac{2^{-r}}{1+\mu(F_r)}\one_{F_r}(x).
+\]
+Then $g$ is strictly positive, finite-valued, measurable, and integrable,
+since
+\[
+        \int_X g\,d\mu
+        =
+        \sum_{r=1}^\infty
+        \frac{2^{-r}\mu(F_r)}{1+\mu(F_r)}
+        \leq
+        \sum_{r=1}^\infty 2^{-r}<\infty.
+\]
+Define
+\[
+        h(x):=\frac{g(x)}{1+\widetilde M(x)}.
+\]
+Then $h$ is strictly positive, finite-valued, and measurable.  On the conull
+set $X_0$,
+\[
+        |f_nh|
+        \leq g
+        \qquad\text{and}\qquad
+        f_nh\to 0.
+\]
+The dominated convergence theorem therefore gives
+\[
+        \int_X |f_nh|\,d\mu\to 0.
+\]
+The convergence in measure follows from Markov's inequality.
+\end{proof}
+
+\section{Concluding remarks}
+
+The original construction is a useful pattern.  When pointwise convergence is
+too weak globally, one can often separate the problem into two countable
+stratifications:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+    \item pieces on which convergence is uniform, supplied here by Egorov's
+    theorem on finite-measure pieces;
+    \item pieces on which the whole sequence is uniformly bounded, supplied
+    here by the pointwise envelope $M=\sup_n |f_n|$.
+\end{enumerate}
+The weight is then chosen small enough on the intersections of the two
+stratifications.  The role of sigma-finiteness is precisely to make the first
+stratification countable through finite-measure exhaustion.  The role of
+pointwise convergence is not only to give the limiting value $0$, but also to
+guarantee pointwise boundedness of the sequence, which is what makes the
+second stratification possible.
+
+\begin{thebibliography}{9}
+
+\bibitem{MSE}
+Henry Shin,
+\emph{Answer to: Let $f_n$ be real and measurable with $f_n(x)\to 0$; show
+there is a positive measurable function $h$ such that $f_nh\to 0$ in measure},
+Mathematics Stack Exchange, answered July 1, 2021.
+\url{https://math.stackexchange.com/questions/4186426/let-f-n-be-real-measurable-w-f-nx-rightarrow-0-show-there-is-a-positiv}
+
+\bibitem{folland}
+Gerald B. Folland,
+\emph{Real Analysis: Modern Techniques and Their Applications},
+2nd ed., Wiley, 1999.
+
+\bibitem{royden}
+H. L. Royden and P. M. Fitzpatrick,
+\emph{Real Analysis},
+4th ed., Pearson, 2010.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Weighting Argument for Pointwise Convergence to Convergence in Measure | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami note on measurable weights turning pointwise convergence into convergence in measure, with Lean verification of the conull uniformization theorem."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A Weighting Argument for Pointwise Convergence to Convergence in Measure | Tensorgami">
+    <meta
+      property="og:description"
+      content="Measurable weights, pointwise envelopes, dominated convergence, and convergence in measure, with Lean-checked formal statements."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="A Weighting Argument for Pointwise Convergence to Convergence in Measure | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="A Lean-checked measurable-weight argument converting pointwise convergence to convergence in measure."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=problemsets-20260508">
+    <script src="../visitor.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "A Weighting Argument for Pointwise Convergence to Convergence in Measure",
+        "url": "https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html",
+        "datePublished": "2026-05-07",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://tensorgami.com/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+          "encodingFormat": "application/pdf"
+        },
+        "keywords": [
+          "measure theory",
+          "pointwise convergence",
+          "convergence in measure",
+          "dominated convergence",
+          "Egorov theorem",
+          "Lean",
+          "mathlib",
+          "formal verification",
+          "new construction"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-sets">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Verified Note</p>
+        <h1 id="note-title">A Weighting Argument for Pointwise Convergence to Convergence in Measure</h1>
+        <p class="hero-copy">
+          A measurable weight suppresses the pointwise envelope of a convergent
+          sequence so that pointwise or almost-everywhere convergence becomes
+          convergence in measure.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Result and mechanism</h2>
+          <p>
+            The note presents a weighting mechanism in two forms: an Egorov-style
+            countable decomposition and a shorter dominated-convergence proof.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Main result</h3>
+            <p>
+              For a sequence of real-valued measurable functions converging to
+              zero almost everywhere on a sigma-finite measure space, there is
+              a conull measurable set <code>A</code> and a strictly positive
+              measurable weight <code>h</code> such that <code>f_n h</code>
+              converges uniformly to zero on <code>A</code>, and therefore
+              converges to zero in measure. The Lean file also records the
+              real-line specialization for Lebesgue measure.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Contribution type</dt>
+                <dd>New construction; Lean formalization</dd>
+              </div>
+              <div>
+                <dt>Contribution</dt>
+                <dd>Explicit measurable-weight construction upgrading almost-everywhere convergence on a sigma-finite measure space to conull uniformization and convergence in measure after multiplying by a strictly positive measurable weight.</dd>
+              </div>
+              <div>
+                <dt>Core mechanism</dt>
+                <dd>Egorov pieces, pointwise envelope, measurable cover-index weight, convergence in measure</dd>
+              </div>
+              <div>
+                <dt>Lean theorem</dt>
+                <dd><code>PointwiseWeighting.exists_conull_pos_measurable_weight_uniformOn_tendstoInMeasure_of_ae_tendsto</code></dd>
+              </div>
+              <div>
+                <dt>Real-line theorem</dt>
+                <dd><code>PointwiseWeighting.real_exists_conull_pos_measurable_weight_uniformOn_tendstoInMeasure</code></dd>
+              </div>
+              <div>
+                <dt>Dominated route</dt>
+                <dd><code>PointwiseWeighting.exists_pos_measurable_weight_tendstoInMeasure_of_ae_tendsto</code></dd>
+              </div>
+              <div>
+                <dt>Lean and mathlib</dt>
+                <dd>Lean 4.29.1, mathlib v4.29.1</dd>
+              </div>
+              <div>
+                <dt>Build command</dt>
+                <dd><code>lake build</code></dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf">PDF</a>
+              <a href="../formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean">Lean source</a>
+              <a href="https://github.com/Tensorgami/tensorgami.github.io/actions/workflows/verify-lean.yml">Lean check</a>
+              <a href="../verification.html">Verification index</a>
+            </div>
+          </article>
+
+          <aside class="reading-note">
+            <strong>Formalization note</strong>
+            <p>
+              Lean checks the conull-uniformization theorem, the countable
+              Egorov cover, pointwise-boundedness stratification, and the
+              dominated-convergence proof. The PDF records the double-series
+              bookkeeping; the formal proof verifies the same uniformization
+              conclusion through a measurable cover-index weight and the
+              pointwise envelope.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved unless otherwise noted.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="../privacy.html">Privacy</a>
+        |
+        <a href="../license.html">License</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>

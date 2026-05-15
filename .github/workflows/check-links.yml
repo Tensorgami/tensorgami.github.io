@@ -1,0 +1,71 @@
+name: Check site hygiene
+run-name: Check site hygiene
+
+on:
+  push:
+    paths:
+      - "*.html"
+      - "**/*.html"
+      - "*.css"
+      - "**/*.css"
+      - "*.js"
+      - "**/*.js"
+      - "*.svg"
+      - "**/*.svg"
+      - "pdfs/**"
+      - "tex/**"
+      - "formalizations/**"
+      - "scripts/check_internal_links.py"
+      - "scripts/check_pdf_metadata.py"
+      - ".github/workflows/check-links.yml"
+  pull_request:
+    paths:
+      - "*.html"
+      - "**/*.html"
+      - "*.css"
+      - "**/*.css"
+      - "*.js"
+      - "**/*.js"
+      - "*.svg"
+      - "**/*.svg"
+      - "pdfs/**"
+      - "tex/**"
+      - "formalizations/**"
+      - "scripts/check_internal_links.py"
+      - "scripts/check_pdf_metadata.py"
+      - ".github/workflows/check-links.yml"
+  workflow_dispatch:
+
+jobs:
+  internal-links:
+    name: Internal site links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Check internal links
+        run: python3 scripts/check_internal_links.py
+
+  pdf-metadata:
+    name: PDF metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install PDF tooling
+        run: python3 -m pip install pypdf
+
+      - name: Check PDF metadata
+        run: python3 scripts/check_pdf_metadata.py

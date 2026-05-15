@@ -1,0 +1,151 @@
+# Tensorgami
+
+Tensorgami is Henry Shin's public mathematical workbench for proof notes,
+expository reconstructions, problem sets, Lean formalizations, and explicit
+proof mechanisms. Some entries record new arguments, extraction
+formulas, or finite certificates; others rebuild known results to make the
+mechanism explicit.
+Individual entries identify contribution type locally, distinguishing new
+constructions, independent solutions, expository reconstructions, problem
+sets, and Lean formalizations.
+
+The archive emphasizes normal forms, reductions, obstructions, finite
+certificates, algorithmic extraction, concrete decompositions, descent, and
+selective formal verification.
+
+## Main pages
+
+- https://tensorgami.com/
+- https://tensorgami.com/mechanisms.html
+- https://tensorgami.com/verification.html
+- https://tensorgami.com/about.html
+- https://tensorgami.com/privacy.html
+- https://tensorgami.com/license.html
+
+## Selected artifacts
+
+### A Weighting Argument for Pointwise Convergence to Convergence in Measure
+
+- Page: https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html
+- PDF: https://tensorgami.com/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean
+- Contribution type: new construction; Lean formalization.
+- Contribution: explicit measurable-weight construction upgrading almost-everywhere convergence on a sigma-finite measure space to conull uniformization and convergence in measure after multiplying by a strictly positive measurable weight.
+- Lean theorem: `PointwiseWeighting.exists_conull_pos_measurable_weight_uniformOn_tendstoInMeasure_of_ae_tendsto`
+- Real-line theorem: `PointwiseWeighting.real_exists_conull_pos_measurable_weight_uniformOn_tendstoInMeasure`
+- Mechanisms: Egorov pieces, pointwise envelope, measurable cover-index weight, convergence in measure.
+
+### IBM Ponder This July 2010
+
+- Page: https://tensorgami.com/notes/ibm-ponder-this-2010.html
+- PDF: https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean
+- Contribution type: independent solution; Lean formalization.
+- Contribution: independent trace and companion-matrix solution to the July 2010 IBM challenge, with the final finite modular certificate verified in Lean.
+- Lean theorem: `IBMPonderThisFinal.ibm_ponder_this_main`
+- Mechanisms: Pisot rounding, trace recurrence, companion-matrix period, finite modular certificate.
+
+### Divisibility of Separated Polynomials
+
+- Page: https://tensorgami.com/notes/separated-polynomial-divisibility.html
+- PDF: https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean
+- Contribution type: new argument; Lean formalization.
+- Contribution: common-outer-polynomial divisibility criterion for separated polynomial differences, proved through free-module residue expansion and diagonal reduction.
+- Lean theorem: `SeparatedPolynomialDifferences.sep_dvd_iff_exists_common_outer`
+- Mechanisms: free-module residue expansion, diagonal reduction, descent.
+
+### A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law
+
+- Page: https://tensorgami.com/notes/galois-frobenius-composition-law.html
+- PDF: https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean
+- Contribution type: new viewpoint; Lean formalization.
+- Contribution: Galois-descent and Frobenius-reduction viewpoint on a separated-polynomial composition criterion, including a Lean-checked cubic square-root functional equation.
+- Lean theorem family: `SeparatedComposition.separated_composition_criterion_iff`
+- Mechanisms: generic fibers, Galois descent, Frobenius reduction.
+
+### Normality, Coherent Extension, Tensor Operations, and Affineness
+
+- Page: https://tensorgami.com/notes/hartshorne-ii-5-14-18.html
+- PDF: https://tensorgami.com/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf
+- Contribution type: independent exercise solutions.
+- Contribution: independent solutions to Hartshorne Algebraic Geometry Chapter II Section 5 Exercises 14-18, with emphasis on projective normality, coherent extension, tensor operations, affine morphisms, relative Spec, and vector bundles.
+- Mechanisms: normalization, section rings, Veronese bookkeeping, geometric mechanism.
+
+### Extracting the First Prime Greater than m
+
+- Page: https://tensorgami.com/notes/extracting-first-prime.html
+- PDF: https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/extracting-first-prime/ExtractingFirstPrime.lean
+- Contribution type: new construction; Lean formalization.
+- Contribution: explicit finite extraction formula for the least prime above `m`, with the final correctness theorem verified in Lean.
+- Lean theorem: `ExtractingFirstPrime.extractedPrime_is_smallest_prime_gt`
+- Mechanisms: gcd filtering, valuation selection, finite certificate.
+
+### A Note on Disjoint Decompositions of [0,1) into Closed Sets
+
+- Page: https://tensorgami.com/notes/disjoint-decompositions.html
+- PDF: https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf
+- Lean source: https://github.com/Tensorgami/tensorgami.github.io/blob/main/formalizations/disjoint-decomposition/DisjointDecomposition.lean
+- Contribution type: independent solution; Lean formalization.
+- Contribution: independent proof of the non-decomposition result via endpoint obstruction and Baire category, with the final statement formalized in Lean.
+- Lean theorem: `no_pairwiseDisjoint_closed_iUnion_eq_Ico`
+- Mechanisms: compactification, boundary obstruction, Baire category.
+
+### Lebesgue's Criterion for Riemann Integrability
+
+- Page: https://tensorgami.com/notes/lebesgue-riemann-integrability.html
+- PDF: https://tensorgami.com/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf
+- Contribution type: expository reconstruction.
+- Contribution: topological proof of the sufficiency direction, organized around compact neighborhoods of the discontinuity set and finite partition control.
+- Mechanisms: compactness, quarantining bad sets, finite partition.
+
+### Selected Problems in Discrete Mathematics and Analysis
+
+- Page: https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html
+- PDF: https://tensorgami.com/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf
+- TeX source: https://tensorgami.com/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex
+- Contribution type: problem set.
+- Contribution: web edition of a compact problem set in counting, covering systems, recurrences, asymptotic series, and finite information encoding.
+- Mechanisms: stars and bars, gap transformations, finite-state recurrences, asymptotic cancellation, ternary outcome coding.
+
+## Selected problem records
+
+### Bilkent Mathematical Problem of the Month, November 2008
+
+- Source: https://math.bilkent.edu.tr/Problem/problem_2008.html
+- Problem: https://math.bilkent.edu.tr/Problem/0810q.pdf
+- Official solution: https://math.bilkent.edu.tr/Problem/0811a.pdf
+- Record: one of three listed solvers for the November 2008 white-sequence problem.
+- Planned Tensorgami work: exposition and Lean formalization.
+- Mechanisms: self-referential recurrence, finite-state dynamics, eventual periodicity, extremal sequence problem.
+
+### IBM Ponder This, July 2010
+
+- Source: https://research.ibm.com/blog/ponder-this-july-2010
+- Tensorgami page: https://tensorgami.com/notes/ibm-ponder-this-2010.html
+- Record: listed solver.
+- Tensorgami work: exposition and Lean formalization available.
+- Mechanisms: Pisot rounding, trace recurrence, companion-matrix period, finite modular certificate.
+
+### IBM Ponder This, August 2010
+
+- Source: https://research.ibm.com/blog/ponder-this-august-2010
+- Record: listed solver for the Lilliput ID-number challenge.
+- Planned Tensorgami work: exposition and Lean formalization.
+- Mechanisms: extremal finite configurations, coordinate projections, finite certificates.
+
+## Formalization environment
+
+The formalized artifacts are independent Lake projects, each pinned to its own
+Lean toolchain and mathlib revision. GitHub Actions runs `lake build` for each
+formalization project.
+
+## External identifiers
+
+- GitHub: https://github.com/Tensorgami
+- ORCID: https://orcid.org/0009-0000-6453-6865
+- LinkedIn: https://www.linkedin.com/in/henry-k-shin/
+- Math StackExchange: https://math.stackexchange.com/users/268083/henry-shin
+- Contact: hkshin@alumni.harvard.edu

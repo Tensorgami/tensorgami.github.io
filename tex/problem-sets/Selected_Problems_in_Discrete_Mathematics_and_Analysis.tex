@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+
+\title{Selected Problems in Discrete Mathematics and Analysis}
+\author{Henry Shin}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problems}
+
+\begin{enumerate}
+
+    \item For positive integers \(1 \leq k \leq n\), show that the number of nondecreasing sequences \(a_1 \leq a_2 \leq \cdots \leq a_k\) where \(a_1, a_2, \ldots, a_k\) are chosen from \(\{1, 2, \ldots, n\}\) is exactly \(\binom{n+k-1}{k}\).
+
+    \item For a nonzero integer \(a\) and an integer \(b\), denote \(P_{a,b} = \{ an + b \mid n \text{ is an integer} \}\). Is there a finite set of integers \(a_1, b_1, \ldots, a_n, b_n\) with \( a_i \neq a_j\) for all \( i \neq j \) such that \(\mathbb{Z} = \bigcup_{i=1}^{n} P_{a_i, b_i}\)?
+
+    \item Given a finite set \( S = \{1, 2, \ldots, n\} \) and a positive integer \( k \), determine the number of \( k \)-tuples \( (i_1, i_2, \ldots, i_k) \) such that \( \{i_1, i_2, \ldots, i_k\} \) is a subset of \( S \) and satisfies \( i_1 < i_2 < \cdots < i_k \) with the additional condition that \( i_2 \geq i_1 + 2 \), \( i_3 \geq i_2 + 2 \), \(\ldots\), \( i_k \geq i_{k-1} + 2 \).
+
+    \item Determine the number of binary strings of length \( n \), where \( n \) is a positive integer, that do not contain the substring \( 1011 \).
+
+    \item Determine the real value \( s \) such that the series
+\[
+\sum_{n=1}^{\infty} \left[(n+s)\log\left(1 + \frac{1}{n}\right) - 1\right]
+\]
+converges absolutely. Additionally, analyze the rate of convergence and investigate the limit to which the series converges. Bonus points if you can show that the series equals exactly \( 2 \log 2 + \frac{1}{2} \log \pi - 1 \) for the particular value of \( s\).
+
+    \item Imagine a testing setting with 5000 bottles of wine, exactly one of which is poisoned, and a large number of prisoners available for testing. The goal is to identify the poisoned bottle by giving small amounts of wine to the prisoners.
+
+    Here are the conditions:
+    \begin{itemize}
+        \item If a prisoner consumes 5 mg of the poisoned wine, they will become very sick.
+        \item If a prisoner consumes 10 mg of the poisoned wine, they will die.
+        \item Each bottle has an essentially unlimited supply of wine.
+        \item The testing results take one hour to appear, and the poisoned bottle must be identified within one hour and ten minutes.
+    \end{itemize}
+    Given these conditions, what is the minimal number of prisoners needed to identify the poisoned wine bottle?
+\end{enumerate}
+\end{document}

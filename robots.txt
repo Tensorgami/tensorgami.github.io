@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tensorgami.com/sitemap.xml

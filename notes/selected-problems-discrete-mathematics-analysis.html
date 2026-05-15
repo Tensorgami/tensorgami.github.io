@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selected Problems in Discrete Mathematics and Analysis | Tensorgami</title>
+    <meta
+      name="description"
+      content="A Tensorgami problem set in counting, covering systems, recurrences, asymptotic series, and finite information encoding."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Selected Problems in Discrete Mathematics and Analysis | Tensorgami">
+    <meta
+      property="og:description"
+      content="A web edition of a problem set in counting, arithmetic structure, recurrences, asymptotic analysis, and finite information encoding."
+    >
+    <meta property="og:url" content="https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Selected Problems in Discrete Mathematics and Analysis | Tensorgami">
+    <meta
+      name="twitter:description"
+      content="Six problems organized by mechanism: counting, covering systems, recurrence, asymptotics, and finite information."
+    >
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css?v=problemsets-20260508">
+    <script src="../visitor.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Selected Problems in Discrete Mathematics and Analysis",
+        "url": "https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html",
+        "datePublished": "2026-04-30",
+        "author": {
+          "@type": "Person",
+          "name": "Henry Shin",
+          "url": "https://tensorgami.com/about.html",
+          "sameAs": [
+            "https://github.com/Tensorgami",
+            "https://orcid.org/0009-0000-6453-6865"
+          ]
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tensorgami",
+          "url": "https://tensorgami.com/"
+        },
+        "encoding": [
+          {
+            "@type": "MediaObject",
+            "contentUrl": "https://tensorgami.com/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+            "encodingFormat": "application/pdf"
+          },
+          {
+            "@type": "MediaObject",
+            "contentUrl": "https://tensorgami.com/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+            "encodingFormat": "application/x-tex"
+          }
+        ],
+        "keywords": [
+          "problem set",
+          "combinatorics",
+          "counting",
+          "covering systems",
+          "recurrences",
+          "binary strings",
+          "asymptotic series",
+          "finite information encoding"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Tensorgami home">Tensorgami</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../#archive">Expositions</a>
+        <a href="../#problem-sets">Problem Sets</a>
+        <a href="../mechanisms.html">Mechanisms</a>
+        <a href="../verification.html">Verification</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="note-title">
+        <p class="eyebrow">Problem Set</p>
+        <h1 id="note-title">Selected Problems in Discrete Mathematics and Analysis</h1>
+        <p class="hero-copy">
+          A web edition of a compact exercise sheet, with the PDF retained as
+          the printable version.
+        </p>
+      </section>
+
+      <section class="content-section" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2 id="summary-title">Problems and mechanisms</h2>
+          <p>
+            Six problems organized around counting, arithmetic structure,
+            recurrences, asymptotic cancellation, and finite information.
+          </p>
+        </div>
+        <div class="entry-list">
+          <article class="note-card">
+            <h3>Web edition</h3>
+            <p>
+              The page records the problem statements in a browsable form while
+              keeping the original PDF available for printing and citation.
+            </p>
+            <dl class="fact-list">
+              <div>
+                <dt>Contribution type</dt>
+                <dd>Problem set</dd>
+              </div>
+              <div>
+                <dt>Format</dt>
+                <dd>Web edition; PDF</dd>
+              </div>
+              <div>
+                <dt>Subjects</dt>
+                <dd>counting, covering systems, recurrences, asymptotic series, finite information encoding</dd>
+              </div>
+              <div>
+                <dt>Mechanisms</dt>
+                <dd>stars and bars, gap transformations, finite-state recurrences, asymptotic cancellation, ternary outcome coding</dd>
+              </div>
+            </dl>
+            <div class="note-actions">
+              <a href="../pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf">PDF</a>
+              <a href="../tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex">TeX source</a>
+              <a href="../#problem-sets">Problem Sets</a>
+            </div>
+          </article>
+
+          <nav class="problem-index note-card" aria-label="Problem index">
+            <h3>Problem index</h3>
+            <ol>
+              <li><a href="#problem-1">Nondecreasing sequences</a> <span>Counting</span></li>
+              <li><a href="#problem-2">Covering the integers by progressions</a> <span>Arithmetic structure</span></li>
+              <li><a href="#problem-3">Separated k-tuples</a> <span>Counting</span></li>
+              <li><a href="#problem-4">Binary strings avoiding 1011</a> <span>Recurrences</span></li>
+              <li><a href="#problem-5">A logarithmic series</a> <span>Asymptotic analysis</span></li>
+              <li><a href="#problem-6">The poisoned wine problem</a> <span>Finite information</span></li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <section class="content-section problem-section" aria-labelledby="problems-title">
+        <div class="section-heading">
+          <p class="eyebrow">Web Edition</p>
+          <h2 id="problems-title">Problem statements</h2>
+          <p>
+            The statements are presented without solutions, matching the role
+            of the PDF as a compact exercise sheet.
+          </p>
+        </div>
+        <div class="entry-list problem-list">
+          <article class="problem-block" id="problem-1">
+            <p class="note-meta">
+              <span>Problem 1</span>
+              <span aria-hidden="true">/</span>
+              <span>Counting</span>
+            </p>
+            <h3>Nondecreasing sequences</h3>
+            <p>
+              For positive integers <span class="math">1 &le; k &le; n</span>,
+              show that the number of nondecreasing sequences
+              <span class="math">a<sub>1</sub> &le; a<sub>2</sub> &le; &ctdot; &le; a<sub>k</sub></span>,
+              where <span class="math">a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>k</sub></span>
+              are chosen from <span class="math">{1, 2, &hellip;, n}</span>, is exactly
+              <span class="math binom-wrap">
+                <span class="binom" aria-label="n plus k minus 1 choose k">
+                  <span>n+k&minus;1</span>
+                  <span>k</span>
+                </span>
+              </span>.
+            </p>
+          </article>
+
+          <article class="problem-block" id="problem-2">
+            <p class="note-meta">
+              <span>Problem 2</span>
+              <span aria-hidden="true">/</span>
+              <span>Arithmetic structure</span>
+            </p>
+            <h3>Covering the integers by progressions</h3>
+            <p>
+              For a nonzero integer <span class="math">a</span> and an integer
+              <span class="math">b</span>, denote
+              <span class="math">P<sub>a,b</sub> = { an + b : n &isin; &Zopf; }</span>.
+              Is there a finite set of integers
+              <span class="math">a<sub>1</sub>, b<sub>1</sub>, &hellip;, a<sub>n</sub>, b<sub>n</sub></span>
+              with <span class="math">a<sub>i</sub> &ne; a<sub>j</sub></span> for all
+              <span class="math">i &ne; j</span> such that
+              <span class="math">&Zopf; = &bigcup;<sub>i=1</sub><sup>n</sup> P<sub>a&#7522;,b&#7522;</sub></span>?
+            </p>
+          </article>
+
+          <article class="problem-block" id="problem-3">
+            <p class="note-meta">
+              <span>Problem 3</span>
+              <span aria-hidden="true">/</span>
+              <span>Counting</span>
+            </p>
+            <h3>Separated k-tuples</h3>
+            <p>
+              Given a finite set <span class="math">S = {1, 2, &hellip;, n}</span>
+              and a positive integer <span class="math">k</span>, determine the
+              number of <span class="math">k</span>-tuples
+              <span class="math">(i<sub>1</sub>, i<sub>2</sub>, &hellip;, i<sub>k</sub>)</span>
+              such that <span class="math">{i<sub>1</sub>, i<sub>2</sub>, &hellip;, i<sub>k</sub>} &subseteq; S</span>
+              and
+              <span class="math">i<sub>1</sub> &lt; i<sub>2</sub> &lt; &ctdot; &lt; i<sub>k</sub></span>,
+              with the additional separation condition
+              <span class="math">i<sub>2</sub> &ge; i<sub>1</sub> + 2</span>,
+              <span class="math">i<sub>3</sub> &ge; i<sub>2</sub> + 2</span>,
+              <span class="math">&hellip;</span>,
+              <span class="math">i<sub>k</sub> &ge; i<sub>k-1</sub> + 2</span>.
+            </p>
+          </article>
+
+          <article class="problem-block" id="problem-4">
+            <p class="note-meta">
+              <span>Problem 4</span>
+              <span aria-hidden="true">/</span>
+              <span>Recurrences</span>
+            </p>
+            <h3>Binary strings avoiding 1011</h3>
+            <p>
+              Determine the number of binary strings of length
+              <span class="math">n</span>, where <span class="math">n</span> is a
+              positive integer, that do not contain the substring
+              <span class="math">1011</span>.
+            </p>
+          </article>
+
+          <article class="problem-block" id="problem-5">
+            <p class="note-meta">
+              <span>Problem 5</span>
+              <span aria-hidden="true">/</span>
+              <span>Asymptotic analysis</span>
+            </p>
+            <h3>A logarithmic series</h3>
+            <p>
+              Determine the real value <span class="math">s</span> such that
+              the series
+            </p>
+            <div class="math-display" aria-label="sum from n equals 1 to infinity of open bracket n plus s times log of one plus one over n minus 1 close bracket">
+              <span class="sum-symbol">&sum;</span><sub>n=1</sub><sup>&infin;</sup>
+              <span class="math-bracket">[(n+s) log(1 + 1/n) &minus; 1]</span>
+            </div>
+            <p>
+              converges absolutely. Additionally, analyze the rate of
+              convergence and investigate the limit to which the series
+              converges. Bonus points if you can show that, for the particular
+              value of <span class="math">s</span>, the series equals exactly
+              <span class="math">2 log 2 + <sup>1</sup>&frasl;<sub>2</sub> log &pi; &minus; 1</span>.
+            </p>
+          </article>
+
+          <article class="problem-block" id="problem-6">
+            <p class="note-meta">
+              <span>Problem 6</span>
+              <span aria-hidden="true">/</span>
+              <span>Finite information</span>
+            </p>
+            <h3>The poisoned wine problem</h3>
+            <p>
+              Imagine a testing setting with <span class="math">5000</span>
+              bottles of wine, exactly one of which is poisoned, and a large
+              number of prisoners available for testing. The goal is to
+              identify the poisoned bottle by giving small amounts of wine to
+              the prisoners.
+            </p>
+            <ul class="problem-conditions">
+              <li>If a prisoner consumes <span class="math">5 mg</span> of the poisoned wine, they become very sick.</li>
+              <li>If a prisoner consumes <span class="math">10 mg</span> of the poisoned wine, they die.</li>
+              <li>Each bottle has an essentially unlimited supply of wine.</li>
+              <li>The testing results take one hour to appear, and the poisoned bottle must be identified within one hour and ten minutes.</li>
+            </ul>
+            <p>
+              Given these conditions, what is the minimal number of prisoners
+              needed to identify the poisoned wine bottle?
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Henry Shin. All rights reserved unless otherwise noted.</p>
+      <p>
+        <a href="https://github.com/Tensorgami">GitHub profile</a>
+        |
+        <a href="https://orcid.org/0009-0000-6453-6865">ORCID</a>
+        |
+        <a href="../mechanisms.html">Mechanisms</a>
+        |
+        <a href="../verification.html">Verification</a>
+        |
+        <a href="../privacy.html">Privacy</a>
+        |
+        <a href="../license.html">License</a>
+        |
+        <a href="mailto:hkshin@alumni.harvard.edu">Contact</a>
+      </p>
+    </footer>
+  </body>
+</html>
